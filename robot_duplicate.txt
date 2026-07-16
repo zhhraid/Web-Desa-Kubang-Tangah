@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /$
+Allow: /index.php$
+Allow: /wp-content/uploads/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+
+# BLOKIR SEMUA HALAMAN YANG SUDAH DIHAPUS
+Disallow: /project-details/
+Disallow: /divine-grace-blog/
+Disallow: /how-important-is-church/
+Disallow: /blog/
+Disallow: /morning-prayer/
+Disallow: /baptisms/
+Disallow: /divine-grace-home/
+Disallow: /flyshot-service/
+Disallow: /church-footer/
+Disallow: /?template_library=*
+
+# BLOKIR HALAMAN UTAMA YANG TIDAK DIINGINKAN
+Disallow: /*?*
+Disallow: /*/feed/
+Disallow: /*/page/
+Disallow: /search/
+Disallow: /author/
+Disallow: /category/
+Disallow: /tag/
+Disallow: /comments/
+Disallow: /xmlrpc.php
+Disallow: /wp-login.php
+Disallow: /wp-signup.php
+
+# HANYA IZINKAN SITEMAP YANG BENAR
+Sitemap: https://desakubangtangah.id/sitemap_index.xml

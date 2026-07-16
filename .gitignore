@@ -1,0 +1,31 @@
+# Local/private configuration
+wp-config.php
+.private/
+
+# Database dumps
+*.sql
+*.sql.gz
+*.sql.zip
+
+# Runtime logs and temporary files
+*.log
+php-server.err
+php-server.log
+wp-content/debug.log
+wp-content/cache/
+wp-content/upgrade/
+wp-content/upgrade-temp-backup/
+wp-content/litespeed/
+wp-content/uploads/*
+!wp-content/uploads/2026/
+wp-content/uploads/2026/*
+!wp-content/uploads/2026/01/
+wp-content/uploads/2026/01/*
+!wp-content/uploads/2026/01/logokt-100x100.png
+!wp-content/uploads/2026/01/logoKubang-1.png
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
