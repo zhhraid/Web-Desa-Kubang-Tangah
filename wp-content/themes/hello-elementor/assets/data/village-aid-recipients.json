@@ -1,0 +1,3939 @@
+{
+  "source": "Data ADMINISTRASI KEPENDUDUKAN DESA KUBANG TANGAH TAHUN 2026",
+  "source_file": "DESA CANTIK 8 juli 2026 fiks.xlsx",
+  "sheet": "Keluarga 2",
+  "updated": "2026-07-08",
+  "source_households": 490,
+  "total_recipients": 68,
+  "priority_decile_households": 242,
+  "assistance_types": 4,
+  "assistance_counts": {
+    "PKH & BPNT": 44,
+    "BPNT": 16,
+    "BLT DD": 5,
+    "Permakanan lansia": 3
+  },
+  "decile_counts": {
+    "6": 53,
+    "1": 50,
+    "2": 38,
+    "3": 49,
+    "7": 34,
+    "5": 59,
+    "4": 46,
+    "9": 51,
+    "Belum didesilkan": 32,
+    "8": 46,
+    "10": 32
+  },
+  "households": [
+    {
+      "id": 1,
+      "name": "SYARIFUDIN",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 2,
+      "name": "RAMLIS",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 3,
+      "name": "YASRIL",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 4,
+      "name": "ARIS KAMARDIAN",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 5,
+      "name": "WALFAJRI",
+      "decile": 3,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 6,
+      "name": "ANDRISAL",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 7,
+      "name": "MASRI",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 8,
+      "name": "SAMIRIN",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 9,
+      "name": "SYAMSIR",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 10,
+      "name": "NURMAYATI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 11,
+      "name": "ILWANDI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 12,
+      "name": "SYAHRUL",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 13,
+      "name": "LISMAWARNI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 14,
+      "name": "MARDIONO",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 15,
+      "name": "MAIDARNIS",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 16,
+      "name": "ROSLAINI",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 17,
+      "name": "DEFRI",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 18,
+      "name": "EDWAR",
+      "decile": 9,
+      "assistance": "BLT DD",
+      "receives_aid": true
+    },
+    {
+      "id": 19,
+      "name": "DAMUIR",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 20,
+      "name": "MAKMUR",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 21,
+      "name": "AFRIZAL",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 22,
+      "name": "JAMARIAH",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 23,
+      "name": "AFRIZOL",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 24,
+      "name": "HAYUNIS",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 25,
+      "name": "DEVI ISWANDI",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 26,
+      "name": "YULIA EFINAR",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 27,
+      "name": "AGUS AHMADI",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 28,
+      "name": "VIKI RAHMAD HAMDANI",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 29,
+      "name": "ASWARTI",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 30,
+      "name": "GUSTINI",
+      "decile": 3,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 31,
+      "name": "ISMAIL",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 32,
+      "name": "DESRA NOFRIANTO",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 33,
+      "name": "ANTONI",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 34,
+      "name": "EDI TASMIN",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 35,
+      "name": "ROSNA",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 36,
+      "name": "YOHANES FIRDAUS",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 37,
+      "name": "FERISTI AFANDI",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 38,
+      "name": "YESI LIENTI",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 39,
+      "name": "ALPISKA",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 40,
+      "name": "RULLY YURICO",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 41,
+      "name": "MARDI HENDRA",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 42,
+      "name": "RAMLI.K",
+      "decile": 4,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 43,
+      "name": "FITRI YENI",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 44,
+      "name": "NURHAILIS",
+      "decile": 1,
+      "assistance": "Permakanan lansia",
+      "receives_aid": true
+    },
+    {
+      "id": 45,
+      "name": "WENDRI",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 46,
+      "name": "AGUS SUPRIYANTO",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 47,
+      "name": "AFRIDAL",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 48,
+      "name": "ASMAWARNI",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 49,
+      "name": "HENDRI",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 50,
+      "name": "DAFLIRUS",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 51,
+      "name": "EDWARD",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 52,
+      "name": "YANDRI ERIZAL",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 53,
+      "name": "JASRIWAN",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 54,
+      "name": "RATNAWILIS",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 55,
+      "name": "ABDI RUSNANDA",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 56,
+      "name": "THAMRIN",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 57,
+      "name": "LINA MARDANI",
+      "decile": 3,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 58,
+      "name": "ARMIS",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 59,
+      "name": "WILMON",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 60,
+      "name": "DEFRI RULI SUSANDI",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 61,
+      "name": "YASRIDUAN",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 62,
+      "name": "WENDRA",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 63,
+      "name": "SAFRIAL",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 64,
+      "name": "AVIK SYAHRIN TANAZ",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 65,
+      "name": "ADIMAS",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 66,
+      "name": "ELMISON",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 67,
+      "name": "ZAINAL ABIDIN",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 68,
+      "name": "ASRIAL.B",
+      "decile": 4,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 69,
+      "name": "ARIZAL",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 70,
+      "name": "ZULKANADI",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 71,
+      "name": "DASRIL",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 72,
+      "name": "YENDI SUHEDI",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 73,
+      "name": "REFDAHERI",
+      "decile": "Belum didesilkan",
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 74,
+      "name": "HASMI",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 75,
+      "name": "HERMAN JONI",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 76,
+      "name": "MAIZAR.B",
+      "decile": 2,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 77,
+      "name": "ALI NASIR",
+      "decile": 5,
+      "assistance": "BLT DD",
+      "receives_aid": true
+    },
+    {
+      "id": 78,
+      "name": "RAFLIS",
+      "decile": 3,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 79,
+      "name": "WENDRIZAL",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 80,
+      "name": "JENDRIZAL",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 81,
+      "name": "SYAFRIZAL",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 82,
+      "name": "ERNIS",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 83,
+      "name": "MARJOHAN",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 84,
+      "name": "YURNALIS",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 85,
+      "name": "ANTONI AFRIKO",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 86,
+      "name": "ERIJON",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 87,
+      "name": "KHAIRUL",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 88,
+      "name": "FAJRI RAMDANI",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 89,
+      "name": "RONI PARDIAN",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 90,
+      "name": "ENDI FAUZI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 91,
+      "name": "NOFRIANTO",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 92,
+      "name": "NOVRIADI",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 93,
+      "name": "SUHAIMI",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 94,
+      "name": "RAJAB",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 95,
+      "name": "PEPI APRILLA ARISHANDI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 96,
+      "name": "DEDI EFENDI",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 97,
+      "name": "MUHAMMAD DAFIT",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 98,
+      "name": "YUSRIL",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 99,
+      "name": "FIRDAUS",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 100,
+      "name": "SUDIRMAN",
+      "decile": 1,
+      "assistance": "BLT DD",
+      "receives_aid": true
+    },
+    {
+      "id": 101,
+      "name": "DARWIS",
+      "decile": 3,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 102,
+      "name": "NASIR",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 103,
+      "name": "AFRIJONAEDI",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 104,
+      "name": "SRIDEFI",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 105,
+      "name": "NURYASMI",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 106,
+      "name": "RIDIANTO RODESKA",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 107,
+      "name": "SYAHRIL",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 108,
+      "name": "HENDRA",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 109,
+      "name": "RUSDI",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 110,
+      "name": "RANDI PRATAMA",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 111,
+      "name": "BARINA",
+      "decile": 2,
+      "assistance": "Permakanan lansia",
+      "receives_aid": true
+    },
+    {
+      "id": 112,
+      "name": "MURNI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 113,
+      "name": "MARDAVID",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 114,
+      "name": "ALIZAR",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 115,
+      "name": "HERIANTO",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 116,
+      "name": "ZARNIWATI",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 117,
+      "name": "DINO TRINAURI",
+      "decile": "Belum didesilkan",
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 118,
+      "name": "MUSRIALDI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 119,
+      "name": "ADE PUTRA",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 120,
+      "name": "NANDA RAHMANDA",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 121,
+      "name": "HARMAINI",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 122,
+      "name": "DENDI ASMARA",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 123,
+      "name": "SUSILAWATI",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 124,
+      "name": "HASMI.H",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 125,
+      "name": "GUSRIWANDI",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 126,
+      "name": "MASRIYAL",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 127,
+      "name": "HENDRIYANA",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 128,
+      "name": "MARIO. S",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 129,
+      "name": "UCI AMELIA",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 130,
+      "name": "SYAFRI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 131,
+      "name": "CHISTIADE SAPUTRA",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 132,
+      "name": "ERICK FERNANDO",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 133,
+      "name": "ANITA RAHAYU",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 134,
+      "name": "OSMAN HENDRI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 135,
+      "name": "YOHANES",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 136,
+      "name": "ROMI",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 137,
+      "name": "SYAMSU ANWAR",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 138,
+      "name": "POPY SAPUTRI",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 139,
+      "name": "FEBRI RAHMADANI",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 140,
+      "name": "RUKMINI",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 141,
+      "name": "YOPI CHANDRA",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 142,
+      "name": "AZIS TANJUNG",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 143,
+      "name": "ARMANTO",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 144,
+      "name": "FEDI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 145,
+      "name": "MASRIZAL",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 146,
+      "name": "EKA FRANSISKA",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 147,
+      "name": "ERDISMON",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 148,
+      "name": "RACHMAD HARYANTO",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 149,
+      "name": "RAWIYAL",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 150,
+      "name": "JUNAIDI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 151,
+      "name": "HENDRI WEWINDRA",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 152,
+      "name": "DENIS NURWIS",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 153,
+      "name": "MARDIANTO",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 154,
+      "name": "ARISON",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 155,
+      "name": "MELDEFITA",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 156,
+      "name": "YARNIS",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 157,
+      "name": "LISMAWARNI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 158,
+      "name": "ARI NOVRI",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 159,
+      "name": "M. YUNIFRI AHADA",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 160,
+      "name": "ALI UMAR",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 161,
+      "name": "DAVID",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 162,
+      "name": "YUL HENDRI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 163,
+      "name": "AFRIDA",
+      "decile": 5,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 164,
+      "name": "GUSNALINDA",
+      "decile": 3,
+      "assistance": "Permakanan lansia",
+      "receives_aid": true
+    },
+    {
+      "id": 165,
+      "name": "RONALDI EKA PUTRA",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 166,
+      "name": "ERNI YULIANTI",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 167,
+      "name": "ROSMAINI",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 168,
+      "name": "ZAINAL",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 169,
+      "name": "ICON",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 170,
+      "name": "ZULHERDI",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 171,
+      "name": "MURDASNI",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 172,
+      "name": "SARDI",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 173,
+      "name": "HENDRI GUSRI KALDAFIT",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 174,
+      "name": "JIRUN. M",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 175,
+      "name": "DISRAILI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 176,
+      "name": "DJANIDAR",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 177,
+      "name": "YULASTRI",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 178,
+      "name": "NOFRIZAL",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 179,
+      "name": "SYAFRIL",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 180,
+      "name": "FETRIZAL",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 181,
+      "name": "SYAIFUL",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 182,
+      "name": "YON HENDRI",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 183,
+      "name": "ERMAYULIS",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 184,
+      "name": "ERNI YUSNITA",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 185,
+      "name": "YULMAWARNI",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 186,
+      "name": "AGUS ASTONO",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 187,
+      "name": "AL ASRI",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 188,
+      "name": "NURLIS",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 189,
+      "name": "JENI WELLANDRI",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 190,
+      "name": "EPIT PITRIADI",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 191,
+      "name": "ROSNAINI",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 192,
+      "name": "JUPRIZAL",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 193,
+      "name": "ZULKIFLI",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 194,
+      "name": "NURLELA",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 195,
+      "name": "HASYENI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 196,
+      "name": "WENDRA SAPUTRA",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 197,
+      "name": "ASLIM",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 198,
+      "name": "RATNAWILIS",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 199,
+      "name": "SYAMSIMAR",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 200,
+      "name": "M. SALEH",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 201,
+      "name": "ADRIYANDI",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 202,
+      "name": "KEN DIA ALFIANDI",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 203,
+      "name": "BONI SAPUTRA",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 204,
+      "name": "FITRATUL ILHAMI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 205,
+      "name": "NASRUL",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 206,
+      "name": "ZULKIFLI",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 207,
+      "name": "ASMAWARNI",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 208,
+      "name": "RICHA EF PUTRA",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 209,
+      "name": "NAFSAL",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 210,
+      "name": "JEFRI WIRA PUTRA",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 211,
+      "name": "SAPARUDIN",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 212,
+      "name": "ASRIL",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 213,
+      "name": "ERIK JANTRABING",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 214,
+      "name": "AZWAR MALIK IBRAHIM",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 215,
+      "name": "RAHMANI",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 216,
+      "name": "MASRIAL",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 217,
+      "name": "DAVID",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 218,
+      "name": "HARTO SIMATUPANG",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 219,
+      "name": "IQBAL KURNIAWAN",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 220,
+      "name": "PARYANTO",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 221,
+      "name": "JON HENDRA",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 222,
+      "name": "ERNIWATI",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 223,
+      "name": "KAMARIAH",
+      "decile": 3,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 224,
+      "name": "RAHMAT PEBRIAN",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 225,
+      "name": "ISMAIL",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 226,
+      "name": "ASRIAL",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 227,
+      "name": "ROSMAINAR",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 228,
+      "name": "ILFAMI",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 229,
+      "name": "HERI RIZA MARTA",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 230,
+      "name": "GUSRIDAL",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 231,
+      "name": "FAHRIZAN FIKRI",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 232,
+      "name": "MAIDAR",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 233,
+      "name": "IRMAWATI",
+      "decile": 3,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 234,
+      "name": "ARIF BUDI ARMAN",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 235,
+      "name": "RIZKI FAUZI RAMADHAN",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 236,
+      "name": "NURHASNA",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 237,
+      "name": "EVONDRI",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 238,
+      "name": "SYAHRIL. PB",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 239,
+      "name": "NICKO MARTIN",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 240,
+      "name": "YUDA HERMANSYAH",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 241,
+      "name": "HARPIS",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 242,
+      "name": "MUSLIM",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 243,
+      "name": "ERDIYUL",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 244,
+      "name": "NURWIN",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 245,
+      "name": "DASIMA",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 246,
+      "name": "ARSUL",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 247,
+      "name": "RAMLI",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 248,
+      "name": "OFRIANTO",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 249,
+      "name": "KALIMI",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 250,
+      "name": "PANDI PRA YUSNAL",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 251,
+      "name": "YUSNI",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 252,
+      "name": "AMRI NAZARUDDIN",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 253,
+      "name": "WENDRA",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 254,
+      "name": "FITRIATI",
+      "decile": 3,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 255,
+      "name": "ZILFISKURI",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 256,
+      "name": "AKHIAD DESDI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 257,
+      "name": "JUFRIADI",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 258,
+      "name": "YUSNARIDA",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 259,
+      "name": "WILDAN HANIF",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 260,
+      "name": "RIFKI FAUZI",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 261,
+      "name": "ZULKIFLI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 262,
+      "name": "ALDIB RAMADHAN",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 263,
+      "name": "AFRIDON",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 264,
+      "name": "YUSMAR",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 265,
+      "name": "BAKHTIAR",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 266,
+      "name": "HARUN SANNIP",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 267,
+      "name": "ISKAN PUTASEL",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 268,
+      "name": "WITTO MARTA PRATAMA",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 269,
+      "name": "AGUSTIN",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 270,
+      "name": "DEKI FEBRIAN",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 271,
+      "name": "ISWAN",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 272,
+      "name": "YETRIATI",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 273,
+      "name": "NEDRIANTI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 274,
+      "name": "ENDRI CHANDRA",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 275,
+      "name": "RUSWANDI",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 276,
+      "name": "RUSDI",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 277,
+      "name": "ALBRET YENTRISNO",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 278,
+      "name": "GUSMAWATI",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 279,
+      "name": "SARMAYULIS",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 280,
+      "name": "YENI ELFIA",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 281,
+      "name": "YUSRIPAL",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 282,
+      "name": "YUSWALDI",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 283,
+      "name": "JASNIWARTI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 284,
+      "name": "HAIDARNIS",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 285,
+      "name": "RIKA SAPUTRA",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 286,
+      "name": "ANDRI HASBI",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 287,
+      "name": "DEDI APRISAL",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 288,
+      "name": "ANDAMI",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 289,
+      "name": "NASRI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 290,
+      "name": "RIKO ZULHENDRI",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 291,
+      "name": "ADRI YANTI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 292,
+      "name": "OKANA KURNIAWAN",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 293,
+      "name": "RIDO",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 294,
+      "name": "INDRA WATSON",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 295,
+      "name": "SALMAN ALFARISI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 296,
+      "name": "M. LUQMAN HAKIM",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 297,
+      "name": "ABDUL GHAFAR ABABA",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 298,
+      "name": "FITRI MARTHA",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 299,
+      "name": "YASNIZON",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 300,
+      "name": "YAZIRMAN",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 301,
+      "name": "NURJASWATI",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 302,
+      "name": "GUSNALDI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 303,
+      "name": "OON VALDI HENDRA",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 304,
+      "name": "IAN HERYANDI",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 305,
+      "name": "AFRIZAL",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 306,
+      "name": "SYAFRIWAL",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 307,
+      "name": "YOHANAS FRENGKI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 308,
+      "name": "ALIDAR",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 309,
+      "name": "APRISASI",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 310,
+      "name": "HASNIBAR",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 311,
+      "name": "ISWARDI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 312,
+      "name": "RICE",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 313,
+      "name": "JENI DEFRIS",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 314,
+      "name": "GISO",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 315,
+      "name": "BACHTIAR.B",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 316,
+      "name": "ZULKIFLI",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 317,
+      "name": "NASRIJAL",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 318,
+      "name": "AFNEDI ENDRA",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 319,
+      "name": "ALDI ARISKA SAPUTRA",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 320,
+      "name": "ROSNANI",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 321,
+      "name": "RIDWAN",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 322,
+      "name": "DASRIL",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 323,
+      "name": "AGUS",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 324,
+      "name": "RUDY HARDIAN",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 325,
+      "name": "ARIS FEBRIKA",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 326,
+      "name": "MAIDARNI",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 327,
+      "name": "YENI LESTARI",
+      "decile": 3,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 328,
+      "name": "JASRUL",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 329,
+      "name": "ISWANDI",
+      "decile": 3,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 330,
+      "name": "YUSRIZAL",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 331,
+      "name": "HENDRA IKA PUTRA",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 332,
+      "name": "YUHENDRI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 333,
+      "name": "DALPENDRI",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 334,
+      "name": "MILIARTI",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 335,
+      "name": "RUSWANDI",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 336,
+      "name": "MASRI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 337,
+      "name": "AMRIZAL",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 338,
+      "name": "SYAMSUL BAHRI",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 339,
+      "name": "AFNEIMAR DEWI",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 340,
+      "name": "NAGA JONSON",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 341,
+      "name": "YUSNA",
+      "decile": 1,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 342,
+      "name": "MARNIS",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 343,
+      "name": "MILAMA",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 344,
+      "name": "KAMARUDIN",
+      "decile": 3,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 345,
+      "name": "ASRIL",
+      "decile": 4,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 346,
+      "name": "NOFRIYADI",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 347,
+      "name": "WIRDAWATI",
+      "decile": 1,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 348,
+      "name": "SYARIPUDIN",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 349,
+      "name": "ZAINAL ARIFIN",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 350,
+      "name": "ZAMRUD KURNIA",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 351,
+      "name": "RANDA ALDINATA",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 352,
+      "name": "APRIS",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 353,
+      "name": "MARIASUN",
+      "decile": 3,
+      "assistance": "BLT DD",
+      "receives_aid": true
+    },
+    {
+      "id": 354,
+      "name": "APRIYANTO",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 355,
+      "name": "SURESMI",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 356,
+      "name": "NOVI ERLY",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 357,
+      "name": "MARTALENA",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 358,
+      "name": "SANDI YUDHA",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 359,
+      "name": "ROMI",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 360,
+      "name": "DAFLI HUMRI",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 361,
+      "name": "YUSNARITA",
+      "decile": 5,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 362,
+      "name": "CHANDRA AGUSTA",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 363,
+      "name": "CESI FEBRIANI",
+      "decile": 4,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 364,
+      "name": "REFLI AMRAN",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 365,
+      "name": "RASFIAN",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 366,
+      "name": "WENDRA HASMI",
+      "decile": 4,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 367,
+      "name": "RIO BUDIANTO",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 368,
+      "name": "GITO HENDRO",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 369,
+      "name": "ROBI EFENDI",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 370,
+      "name": "BONITA SOFIA",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 371,
+      "name": "ZULFAMI",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 372,
+      "name": "NOFRIAN",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 373,
+      "name": "ANDI RAWAN",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 374,
+      "name": "NURBAINI",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 375,
+      "name": "AFRI JUNAIDI",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 376,
+      "name": "ASMARNIS",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 377,
+      "name": "ORDEYAN",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 378,
+      "name": "PRISTIO ZEBRI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 379,
+      "name": "ARFI SEPRIANDRI",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 380,
+      "name": "TAUFIK RIDHA",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 381,
+      "name": "LAMROZEN JR",
+      "decile": 5,
+      "assistance": "BLT DD",
+      "receives_aid": true
+    },
+    {
+      "id": 382,
+      "name": "JASRIZAL",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 383,
+      "name": "KHAIRUL KUDUS",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 384,
+      "name": "RONI MARDONAL",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 385,
+      "name": "EVANS CHAYA KHARISMA",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 386,
+      "name": "RICI SUHENDRA",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 387,
+      "name": "AMRIYAS",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 388,
+      "name": "APRIANTO",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 389,
+      "name": "ADRIWAN",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 390,
+      "name": "FARIAL",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 391,
+      "name": "MHD. SYAWQI NAZAR",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 392,
+      "name": "KHAIRUL HUDA",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 393,
+      "name": "SYAEFUDDIN AHMAD",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 394,
+      "name": "ELFIAN",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 395,
+      "name": "ALI YURNAL",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 396,
+      "name": "ELVI ZONA",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 397,
+      "name": "AGIL OKTA FIRNANDO",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 398,
+      "name": "MASROMI",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 399,
+      "name": "RABANI",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 400,
+      "name": "MARYONI",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 401,
+      "name": "HEDI MARYANTO",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 402,
+      "name": "KASNIWATI",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 403,
+      "name": "BUSTANUL",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 404,
+      "name": "USDEKAR",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 405,
+      "name": "ACHYAR AMIR",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 406,
+      "name": "HERWATI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 407,
+      "name": "SYOFYAN",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 408,
+      "name": "AFRISON",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 409,
+      "name": "SYOFNELDA",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 410,
+      "name": "SUARNI",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 411,
+      "name": "FIRMAN",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 412,
+      "name": "YULIZAR",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 413,
+      "name": "ERFANDRI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 414,
+      "name": "JASRIL",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 415,
+      "name": "SYAMSURIZAL",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 416,
+      "name": "RAMLI",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 417,
+      "name": "YOSI SUSANDA",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 418,
+      "name": "KARTINI",
+      "decile": 3,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 419,
+      "name": "INDRA GAFUR",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 420,
+      "name": "YUSFRIZAL",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 421,
+      "name": "DICKI ANANDA",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 422,
+      "name": "RIAN",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 423,
+      "name": "ROSWIN",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 424,
+      "name": "IMELDA ROMI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 425,
+      "name": "EDISON",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 426,
+      "name": "IRGUSMI AMIR",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 427,
+      "name": "AMRIL",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 428,
+      "name": "DAVID HARI SANDY",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 429,
+      "name": "SYAMSUL BAHRI",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 430,
+      "name": "JUSMARDI",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 431,
+      "name": "YUSNI",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 432,
+      "name": "ERMON",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 433,
+      "name": "ARION",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 434,
+      "name": "AMRIZAL",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 435,
+      "name": "ADDAH YANUAR",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 436,
+      "name": "MARLIA DEFRIZA",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 437,
+      "name": "YUDAHRUL",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 438,
+      "name": "MARTIUS",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 439,
+      "name": "DASRIJAL",
+      "decile": 4,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 440,
+      "name": "AFRISAL",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 441,
+      "name": "RUSTAM",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 442,
+      "name": "SYAMSINUL ASRI",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 443,
+      "name": "HENDRI WITA",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 444,
+      "name": "DIO REVANDA",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 445,
+      "name": "NASTITAL",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 446,
+      "name": "NOFRI HENDRA",
+      "decile": 10,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 447,
+      "name": "IDRUS",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 448,
+      "name": "DONI ALDI SAPUTRA",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 449,
+      "name": "RAMSI",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 450,
+      "name": "JOKO PERDIANTO",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 451,
+      "name": "DALIMI",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 452,
+      "name": "NAZWIR",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 453,
+      "name": "ALIZAR",
+      "decile": 3,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 454,
+      "name": "ODET ISMARITA",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 455,
+      "name": "ASRIL",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 456,
+      "name": "TAUFIK SIMBOLON",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 457,
+      "name": "GUSTINA",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 458,
+      "name": "ARIS WANDI",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 459,
+      "name": "ZULHENDRI",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 460,
+      "name": "RUDI INDRAWAN",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 461,
+      "name": "FADLI INSAN ILHAMKA",
+      "decile": "Belum didesilkan",
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 462,
+      "name": "ZUBIR",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 463,
+      "name": "MULYADI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 464,
+      "name": "RISMAN",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 465,
+      "name": "AFRIZAL",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 466,
+      "name": "YASIRWAN",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 467,
+      "name": "DASRIL",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 468,
+      "name": "ADONIS",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 469,
+      "name": "ARFANDI ADHA KAMAR",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 470,
+      "name": "DEFRIZAL",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 471,
+      "name": "SYAFRISAL",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 472,
+      "name": "SUSILAWATI",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 473,
+      "name": "RUDY KALCES",
+      "decile": 4,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 474,
+      "name": "AL AZHAR.T",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 475,
+      "name": "ERMA",
+      "decile": 3,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 476,
+      "name": "AGUS MEIZAL",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 477,
+      "name": "TRI PRASETYO",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 478,
+      "name": "DASRIL",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 479,
+      "name": "NURHAYATI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 480,
+      "name": "YUSNANI",
+      "decile": 2,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 481,
+      "name": "MUSWARNA",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 482,
+      "name": "AFRI DONAL",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 483,
+      "name": "NURSYAFNI",
+      "decile": 2,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 484,
+      "name": "NASRIYAL",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 485,
+      "name": "ARNIS",
+      "decile": 1,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 486,
+      "name": "ASNIDAR",
+      "decile": 5,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 487,
+      "name": "RAHMAT CAHYADI",
+      "decile": 7,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 488,
+      "name": "DOFRIANTO",
+      "decile": 6,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 489,
+      "name": "SYAFRAN EPENDI",
+      "decile": 9,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    },
+    {
+      "id": 490,
+      "name": "RENO WULANDARI",
+      "decile": 8,
+      "assistance": "Tidak mendapat bantuan",
+      "receives_aid": false
+    }
+  ],
+  "recipients": [
+    {
+      "id": 2,
+      "name": "RAMLIS",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 5,
+      "name": "WALFAJRI",
+      "decile": 3,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 16,
+      "name": "ROSLAINI",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 18,
+      "name": "EDWAR",
+      "decile": 9,
+      "assistance": "BLT DD",
+      "receives_aid": true
+    },
+    {
+      "id": 19,
+      "name": "DAMUIR",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 30,
+      "name": "GUSTINI",
+      "decile": 3,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 31,
+      "name": "ISMAIL",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 42,
+      "name": "RAMLI.K",
+      "decile": 4,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 44,
+      "name": "NURHAILIS",
+      "decile": 1,
+      "assistance": "Permakanan lansia",
+      "receives_aid": true
+    },
+    {
+      "id": 54,
+      "name": "RATNAWILIS",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 57,
+      "name": "LINA MARDANI",
+      "decile": 3,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 66,
+      "name": "ELMISON",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 68,
+      "name": "ASRIAL.B",
+      "decile": 4,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 73,
+      "name": "REFDAHERI",
+      "decile": "Belum didesilkan",
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 74,
+      "name": "HASMI",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 76,
+      "name": "MAIZAR.B",
+      "decile": 2,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 77,
+      "name": "ALI NASIR",
+      "decile": 5,
+      "assistance": "BLT DD",
+      "receives_aid": true
+    },
+    {
+      "id": 78,
+      "name": "RAFLIS",
+      "decile": 3,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 83,
+      "name": "MARJOHAN",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 99,
+      "name": "FIRDAUS",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 100,
+      "name": "SUDIRMAN",
+      "decile": 1,
+      "assistance": "BLT DD",
+      "receives_aid": true
+    },
+    {
+      "id": 101,
+      "name": "DARWIS",
+      "decile": 3,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 111,
+      "name": "BARINA",
+      "decile": 2,
+      "assistance": "Permakanan lansia",
+      "receives_aid": true
+    },
+    {
+      "id": 117,
+      "name": "DINO TRINAURI",
+      "decile": "Belum didesilkan",
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 142,
+      "name": "AZIS TANJUNG",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 163,
+      "name": "AFRIDA",
+      "decile": 5,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 164,
+      "name": "GUSNALINDA",
+      "decile": 3,
+      "assistance": "Permakanan lansia",
+      "receives_aid": true
+    },
+    {
+      "id": 180,
+      "name": "FETRIZAL",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 223,
+      "name": "KAMARIAH",
+      "decile": 3,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 233,
+      "name": "IRMAWATI",
+      "decile": 3,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 245,
+      "name": "DASIMA",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 250,
+      "name": "PANDI PRA YUSNAL",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 251,
+      "name": "YUSNI",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 254,
+      "name": "FITRIATI",
+      "decile": 3,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 276,
+      "name": "RUSDI",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 279,
+      "name": "SARMAYULIS",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 287,
+      "name": "DEDI APRISAL",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 308,
+      "name": "ALIDAR",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 309,
+      "name": "APRISASI",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 326,
+      "name": "MAIDARNI",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 327,
+      "name": "YENI LESTARI",
+      "decile": 3,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 329,
+      "name": "ISWANDI",
+      "decile": 3,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 341,
+      "name": "YUSNA",
+      "decile": 1,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 343,
+      "name": "MILAMA",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 344,
+      "name": "KAMARUDIN",
+      "decile": 3,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 345,
+      "name": "ASRIL",
+      "decile": 4,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 346,
+      "name": "NOFRIYADI",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 347,
+      "name": "WIRDAWATI",
+      "decile": 1,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 348,
+      "name": "SYARIPUDIN",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 353,
+      "name": "MARIASUN",
+      "decile": 3,
+      "assistance": "BLT DD",
+      "receives_aid": true
+    },
+    {
+      "id": 354,
+      "name": "APRIYANTO",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 361,
+      "name": "YUSNARITA",
+      "decile": 5,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 363,
+      "name": "CESI FEBRIANI",
+      "decile": 4,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 366,
+      "name": "WENDRA HASMI",
+      "decile": 4,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 374,
+      "name": "NURBAINI",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 381,
+      "name": "LAMROZEN JR",
+      "decile": 5,
+      "assistance": "BLT DD",
+      "receives_aid": true
+    },
+    {
+      "id": 399,
+      "name": "RABANI",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 418,
+      "name": "KARTINI",
+      "decile": 3,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 422,
+      "name": "RIAN",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 439,
+      "name": "DASRIJAL",
+      "decile": 4,
+      "assistance": "BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 449,
+      "name": "RAMSI",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 452,
+      "name": "NAZWIR",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 453,
+      "name": "ALIZAR",
+      "decile": 3,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 457,
+      "name": "GUSTINA",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 467,
+      "name": "DASRIL",
+      "decile": 2,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 469,
+      "name": "ARFANDI ADHA KAMAR",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 474,
+      "name": "AL AZHAR.T",
+      "decile": 1,
+      "assistance": "PKH & BPNT",
+      "receives_aid": true
+    },
+    {
+      "id": 480,
+      "name": "YUSNANI",
+      "decile": 2,
+      "assistance": "BPNT",
+      "receives_aid": true
+    }
+  ]
+}

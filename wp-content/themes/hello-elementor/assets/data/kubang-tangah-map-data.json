@@ -1,0 +1,122 @@
+{
+  "source": "Peta Administrasi Desa Kubang Tangah, KKN UNP 2025 dan Data Administrasi Kependudukan Desa Kubang Tangah Tahun 2026",
+  "districts": [
+    {
+      "name": "Sionsek",
+      "center": [-0.6961, 100.7515],
+      "radius": 690,
+      "male": 57,
+      "female": 67,
+      "total": 124,
+      "facilities": ["Surau Al Ikhlas"]
+    },
+    {
+      "name": "Guguak Pauh",
+      "center": [-0.6964, 100.7588],
+      "radius": 610,
+      "male": 77,
+      "female": 67,
+      "total": 144,
+      "facilities": ["Surau Nurul Amal"]
+    },
+    {
+      "name": "Batu Tajam",
+      "center": [-0.6973, 100.7659],
+      "radius": 760,
+      "male": 261,
+      "female": 242,
+      "total": 503,
+      "facilities": ["Kantor Desa", "Masjid Taqwa", "Puskesmas Pembantu", "Pertashop Kubang", "IPA Batu Tajam PDAM"]
+    },
+    {
+      "name": "Luak Mani",
+      "center": [-0.7049, 100.7568],
+      "radius": 720,
+      "male": 150,
+      "female": 143,
+      "total": 293,
+      "facilities": ["SMP Negeri 4 Sawahlunto", "Surau Luak Mani", "Lapangan Sepak Bola Bagan"]
+    },
+    {
+      "name": "Polak Datar",
+      "center": [-0.7089, 100.7507],
+      "radius": 720,
+      "male": 209,
+      "female": 204,
+      "total": 413,
+      "facilities": ["Homestay dan Kebun Naga", "Lapangan Polak", "TK Al Ikhlas"]
+    }
+  ],
+  "facilities": [
+    {
+      "name": "Batu Ponjong Limestone",
+      "type": "Potensi alam",
+      "district": "Sionsek",
+      "position": [-0.7007, 100.7518],
+      "code": "BP"
+    },
+    {
+      "name": "Homestay dan Kebun Naga",
+      "type": "Wisata dan usaha",
+      "district": "Polak Datar",
+      "position": [-0.7074, 100.7540],
+      "code": "HN"
+    },
+    {
+      "name": "IPA Batu Tajam PDAM",
+      "type": "Air bersih",
+      "district": "Batu Tajam",
+      "position": [-0.6968, 100.7667],
+      "code": "IPA"
+    },
+    {
+      "name": "Kantor Desa",
+      "type": "Pemerintahan",
+      "district": "Batu Tajam",
+      "position": [-0.6963, 100.7671],
+      "code": "KD"
+    },
+    {
+      "name": "Lapangan Sepak Bola Bagan",
+      "type": "Olahraga",
+      "district": "Luak Mani",
+      "position": [-0.7082, 100.7534],
+      "code": "LB"
+    },
+    {
+      "name": "Masjid Taqwa",
+      "type": "Ibadah",
+      "district": "Batu Tajam",
+      "position": [-0.6966, 100.7662],
+      "code": "MT"
+    },
+    {
+      "name": "Pertashop Kubang",
+      "type": "Layanan energi",
+      "district": "Batu Tajam",
+      "position": [-0.6964, 100.7655],
+      "code": "PT"
+    },
+    {
+      "name": "Puskesmas Pembantu",
+      "type": "Kesehatan",
+      "district": "Batu Tajam",
+      "position": [-0.6968, 100.7653],
+      "code": "PP"
+    },
+    {
+      "name": "SMP Negeri 4 Sawahlunto",
+      "type": "Pendidikan",
+      "district": "Luak Mani",
+      "position": [-0.7046, 100.7574],
+      "code": "SMP"
+    },
+    {
+      "name": "Surau Luak Mani",
+      "type": "Ibadah",
+      "district": "Luak Mani",
+      "position": [-0.7085, 100.7538],
+      "code": "SL"
+    }
+  ]
+}

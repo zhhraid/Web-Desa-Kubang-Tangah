@@ -1,7 +1,11 @@
-.village-footer {
-	background: #10261f;
+.site-footer.village-footer {
+	background: linear-gradient(135deg, #1b6f3d, #0f3b27);
+	box-sizing: border-box;
 	color: #eaf4ef;
-	padding: 56px 20px 0;
+	margin-inline: 0;
+	max-width: none;
+	padding: 56px clamp(20px, 6vw, 96px) 0;
+	width: 100%;
 }
 
 .village-footer a {
@@ -21,7 +25,8 @@
 	grid-template-columns: minmax(0, 1.4fr) minmax(180px, 0.7fr) minmax(260px, 1fr);
 	gap: 40px;
 	margin: 0 auto;
-	max-width: 1180px;
+	max-width: 1440px;
+	width: 100%;
 }
 
 .village-footer__logo {
@@ -120,11 +125,12 @@
 
 .village-footer__bottom {
 	border-top: 1px solid rgba(255, 255, 255, 0.12);
-	color: #aec3ba;
+	color: #c4d9cf;
 	font-size: 14px;
 	margin: 44px auto 0;
-	max-width: 1180px;
+	max-width: 1440px;
 	padding: 18px 0;
+	width: 100%;
 }
 
 @media (max-width: 900px) {

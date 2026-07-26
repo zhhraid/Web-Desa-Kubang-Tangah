@@ -125,6 +125,42 @@ if ( ! function_exists( 'hello_elementor_display_header_footer' ) ) {
 	}
 }
 
+if ( ! function_exists( 'hello_elementor_village_whatsapp_url' ) ) {
+	/**
+	 * Build the official WhatsApp contact URL for Desa Kubang Tangah.
+	 *
+	 * @return string
+	 */
+	function hello_elementor_village_whatsapp_url() {
+		return 'https://api.whatsapp.com/send?' . http_build_query(
+			[
+				'phone' => '6285271664112',
+				'text'  => 'Halo Pak Rice, saya ingin bertanya tentang Desa Kubang Tangah.',
+			],
+			'',
+			'&',
+			PHP_QUERY_RFC3986
+		);
+	}
+}
+
+if ( ! function_exists( 'hello_elementor_village_redirect_contact_page' ) ) {
+	/**
+	 * Send the old contact page directly to the village WhatsApp contact.
+	 *
+	 * @return void
+	 */
+	function hello_elementor_village_redirect_contact_page() {
+		if ( ! is_page( 'kontak' ) ) {
+			return;
+		}
+
+		wp_redirect( hello_elementor_village_whatsapp_url(), 302 ); // phpcs:ignore WordPress.Security.SafeRedirect.wp_redirect_wp_redirect
+		exit;
+	}
+}
+add_action( 'template_redirect', 'hello_elementor_village_redirect_contact_page' );
+
 if ( ! function_exists( 'hello_elementor_scripts_styles' ) ) {
 	/**
 	 * Theme Scripts & Styles.
@@ -162,19 +198,366 @@ if ( ! function_exists( 'hello_elementor_scripts_styles' ) ) {
 				'hello-elementor-village-header',
 				HELLO_THEME_STYLE_URL . 'village-header.css',
 				[ 'hello-elementor-header-footer' ],
-				HELLO_ELEMENTOR_VERSION
+				filemtime( HELLO_THEME_STYLE_PATH . 'village-header.css' )
 			);
 
 			wp_enqueue_style(
 				'hello-elementor-village-footer',
 				HELLO_THEME_STYLE_URL . 'village-footer.css',
 				[ 'hello-elementor-header-footer' ],
-				HELLO_ELEMENTOR_VERSION
+				filemtime( HELLO_THEME_STYLE_PATH . 'village-footer.css' )
 			);
+
+			if ( is_front_page() || is_page( 'data-infografis' ) ) {
+				wp_enqueue_style(
+					'hello-elementor-village-home',
+					HELLO_THEME_STYLE_URL . 'village-home.css',
+					[ 'hello-elementor-village-header', 'hello-elementor-village-footer' ],
+					filemtime( HELLO_THEME_STYLE_PATH . 'village-home.css' )
+				);
+			}
+
+			if ( is_front_page() ) {
+				wp_enqueue_script(
+					'hello-elementor-village-home',
+					HELLO_THEME_SCRIPTS_URL . 'village-home.js',
+					[],
+					filemtime( HELLO_THEME_SCRIPTS_PATH . 'village-home.js' ),
+					true
+				);
+			}
+
+			if ( is_page( 'data-infografis' ) ) {
+				wp_enqueue_style(
+					'hello-elementor-village-infographics',
+					HELLO_THEME_STYLE_URL . 'village-infographics.css',
+					[ 'hello-elementor-village-home' ],
+					filemtime( HELLO_THEME_STYLE_PATH . 'village-infographics.css' )
+				);
+
+				wp_enqueue_script(
+					'hello-elementor-village-infographics',
+					HELLO_THEME_SCRIPTS_URL . 'village-infographics.js',
+					[],
+					filemtime( HELLO_THEME_SCRIPTS_PATH . 'village-infographics.js' ),
+					true
+				);
+			}
+
+			if ( is_page( 'profil_desa' ) ) {
+				$leaflet_path = get_template_directory() . '/assets/vendor/leaflet/';
+
+				wp_enqueue_style(
+					'hello-elementor-leaflet',
+					get_template_directory_uri() . '/assets/vendor/leaflet/leaflet.css',
+					[],
+					filemtime( $leaflet_path . 'leaflet.css' )
+				);
+
+				wp_enqueue_style(
+					'hello-elementor-village-profile',
+					HELLO_THEME_STYLE_URL . 'village-profile.css',
+					[ 'hello-elementor-village-header', 'hello-elementor-village-footer', 'hello-elementor-leaflet' ],
+					filemtime( HELLO_THEME_STYLE_PATH . 'village-profile.css' )
+				);
+
+				wp_enqueue_script(
+					'hello-elementor-leaflet',
+					get_template_directory_uri() . '/assets/vendor/leaflet/leaflet.js',
+					[],
+					filemtime( $leaflet_path . 'leaflet.js' ),
+					true
+				);
+
+				wp_enqueue_script(
+					'hello-elementor-village-profile',
+					HELLO_THEME_SCRIPTS_URL . 'village-profile.js',
+					[ 'hello-elementor-leaflet' ],
+					filemtime( HELLO_THEME_SCRIPTS_PATH . 'village-profile.js' ),
+					true
+				);
+			}
+
+			if ( is_page( 'pemerintahan_desa' ) ) {
+				wp_enqueue_style(
+					'hello-elementor-village-government',
+					HELLO_THEME_STYLE_URL . 'village-government.css',
+					[ 'hello-elementor-village-header', 'hello-elementor-village-footer' ],
+					filemtime( HELLO_THEME_STYLE_PATH . 'village-government.css' )
+				);
+
+				wp_enqueue_script(
+					'hello-elementor-village-government',
+					HELLO_THEME_SCRIPTS_URL . 'village-government.js',
+					[],
+					filemtime( HELLO_THEME_SCRIPTS_PATH . 'village-government.js' ),
+					true
+				);
+			}
+
+			if ( is_page( 'berita' ) || is_singular( 'post' ) ) {
+				wp_enqueue_style(
+					'hello-elementor-village-news',
+					HELLO_THEME_STYLE_URL . 'village-news.css',
+					[ 'hello-elementor-village-header', 'hello-elementor-village-footer' ],
+					filemtime( HELLO_THEME_STYLE_PATH . 'village-news.css' )
+				);
+
+				wp_enqueue_script(
+					'hello-elementor-village-news',
+					HELLO_THEME_SCRIPTS_URL . 'village-news.js',
+					[],
+					filemtime( HELLO_THEME_SCRIPTS_PATH . 'village-news.js' ),
+					true
+				);
+			}
+
+			if ( is_page( 'galeri' ) ) {
+				wp_enqueue_style(
+					'hello-elementor-village-gallery',
+					HELLO_THEME_STYLE_URL . 'village-gallery.css',
+					[ 'hello-elementor-village-header', 'hello-elementor-village-footer' ],
+					filemtime( HELLO_THEME_STYLE_PATH . 'village-gallery.css' )
+				);
+
+				wp_enqueue_script(
+					'hello-elementor-village-gallery',
+					HELLO_THEME_SCRIPTS_URL . 'village-gallery.js',
+					[],
+					filemtime( HELLO_THEME_SCRIPTS_PATH . 'village-gallery.js' ),
+					true
+				);
+			}
+
+			if ( is_page( 'data' ) ) {
+				wp_enqueue_style(
+					'hello-elementor-village-information',
+					HELLO_THEME_STYLE_URL . 'village-information.css',
+					[ 'hello-elementor-village-header', 'hello-elementor-village-footer' ],
+					filemtime( HELLO_THEME_STYLE_PATH . 'village-information.css' )
+				);
+
+				wp_enqueue_script(
+					'hello-elementor-village-information',
+					HELLO_THEME_SCRIPTS_URL . 'village-information.js',
+					[],
+					filemtime( HELLO_THEME_SCRIPTS_PATH . 'village-information.js' ),
+					true
+				);
+			}
 		}
 	}
 }
 add_action( 'wp_enqueue_scripts', 'hello_elementor_scripts_styles' );
+
+/**
+ * Add stable classes for custom village pages that use dedicated templates.
+ *
+ * @param string[] $classes Body classes.
+ * @return string[]
+ */
+function hello_elementor_village_body_classes( $classes ) {
+	if ( is_page( 'profil_desa' ) ) {
+		$classes[] = 'village-profile-page';
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'hello_elementor_village_body_classes' );
+
+/**
+ * Custom village templates do not use Elementor widgets, so the frontend
+ * runtime is unnecessary and can otherwise emit a missing configuration error.
+ */
+function hello_elementor_village_profile_dequeue_unused_scripts() {
+	if ( ! is_page( [ 'profil_desa', 'pemerintahan_desa', 'berita', 'galeri', 'data' ] ) && ! is_singular( 'post' ) ) {
+		return;
+	}
+
+	$unused_scripts = [
+		'eael-general',
+		'elementor-frontend',
+		'elementor-frontend-modules',
+		'elementor-webpack-runtime',
+	];
+
+	foreach ( $unused_scripts as $script ) {
+		wp_dequeue_script( $script );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'hello_elementor_village_profile_dequeue_unused_scripts', 1000 );
+
+/**
+ * Repair encoding artifacts retained in imported village news content.
+ *
+ * @param string $value Source value.
+ * @return string
+ */
+function hello_elementor_village_news_clean_encoding( $value ) {
+	return str_replace(
+		[
+			"\xC6\x92??",
+			"\xC2\xB6\xC3\xBF",
+			"\xC3\xA2\xE2\x82\xAC\xE2\x80\x9C",
+			"\xC3\xA2\xE2\x82\xAC\xE2\x80\x9D",
+			"\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2",
+			"\xC3\xA2\xE2\x82\xAC\xC5\x93",
+			"\xC3\x82",
+		],
+		[ '-', ' ', '-', '-', "'", '"', '' ],
+		(string) $value
+	);
+}
+
+/**
+ * Return a clean plain-text value for village news cards.
+ *
+ * @param string $value Source value.
+ * @return string
+ */
+function hello_elementor_village_news_clean_text( $value ) {
+	$value = hello_elementor_village_news_clean_encoding( html_entity_decode( wp_strip_all_tags( $value ), ENT_QUOTES, 'UTF-8' ) );
+	$value = preg_replace( '/\s+/u', ' ', $value );
+
+	return trim( (string) $value );
+}
+
+/**
+ * Apply repaired titles to imported village posts and their metadata.
+ *
+ * @param string $title   Post title.
+ * @param int    $post_id Post ID.
+ * @return string
+ */
+function hello_elementor_village_news_clean_post_title( $title, $post_id = 0 ) {
+	if ( $post_id && 'post' === get_post_type( $post_id ) ) {
+		return hello_elementor_village_news_clean_text( $title );
+	}
+
+	return $title;
+}
+add_filter( 'the_title', 'hello_elementor_village_news_clean_post_title', 20, 2 );
+
+/**
+ * Repair imported characters in browser and SEO titles for news articles.
+ *
+ * @param string $value Generated title value.
+ * @return string
+ */
+function hello_elementor_village_news_clean_generated_title( $value ) {
+	return is_singular( 'post' ) ? hello_elementor_village_news_clean_encoding( $value ) : $value;
+}
+add_filter( 'wpseo_title', 'hello_elementor_village_news_clean_generated_title', 20 );
+add_filter( 'wpseo_opengraph_title', 'hello_elementor_village_news_clean_generated_title', 20 );
+add_filter( 'wpseo_twitter_title', 'hello_elementor_village_news_clean_generated_title', 20 );
+
+/**
+ * Resolve a local news image, including posts without a featured image.
+ *
+ * @param int    $post_id      Post ID.
+ * @param string $fallback_url Optional fallback image.
+ * @return string
+ */
+function hello_elementor_village_news_image( $post_id, $fallback_url = '' ) {
+	$thumbnail = get_the_post_thumbnail_url( $post_id, 'large' );
+	if ( $thumbnail ) {
+		return $thumbnail;
+	}
+
+	$content = (string) get_post_field( 'post_content', $post_id );
+	if ( preg_match( '/<img[^>]+src=["\']([^"\']+)["\']/i', $content, $matches ) ) {
+		$image_url = html_entity_decode( $matches[1], ENT_QUOTES, 'UTF-8' );
+		$path      = (string) wp_parse_url( $image_url, PHP_URL_PATH );
+		$marker    = '/wp-content/uploads/';
+		$position  = strpos( $path, $marker );
+
+		if ( false !== $position ) {
+			$relative   = ltrim( substr( $path, $position + strlen( $marker ) ), '/' );
+			$upload_dir = wp_get_upload_dir();
+
+			return trailingslashit( $upload_dir['baseurl'] ) . $relative;
+		}
+
+		return $image_url;
+	}
+
+	return $fallback_url;
+}
+
+/**
+ * Infer a useful public-facing topic when imported posts only use "Blog".
+ *
+ * @param int $post_id Post ID.
+ * @return string
+ */
+function hello_elementor_village_news_topic( $post_id ) {
+	$post = get_post( $post_id );
+	if ( ! $post ) {
+		return 'Berita Desa';
+	}
+
+	$searchable = strtolower( hello_elementor_village_news_clean_text( $post->post_title . ' ' . $post->post_content ) );
+	if ( false !== strpos( $searchable, 'bumdes' ) || false !== strpos( $searchable, 'penyertaan modal' ) ) {
+		return 'Pemerintahan';
+	}
+	if ( false !== strpos( $searchable, 'senam' ) || false !== strpos( $searchable, 'kesehatan' ) ) {
+		return 'Kesehatan';
+	}
+	if ( false !== strpos( $searchable, 'kkn' ) || false !== strpos( $searchable, 'unand' ) || false !== strpos( $searchable, 'unp' ) ) {
+		return 'Kegiatan';
+	}
+
+	$categories = get_the_category( $post_id );
+	if ( ! empty( $categories ) && 'Blog' !== $categories[0]->name ) {
+		return hello_elementor_village_news_clean_text( $categories[0]->name );
+	}
+
+	return 'Berita Desa';
+}
+
+/**
+ * Build a concise excerpt from imported news content.
+ *
+ * @param int $post_id Post ID.
+ * @return string
+ */
+function hello_elementor_village_news_excerpt( $post_id ) {
+	$post = get_post( $post_id );
+	if ( ! $post ) {
+		return '';
+	}
+
+	$source = $post->post_excerpt ? $post->post_excerpt : $post->post_content;
+	$text   = hello_elementor_village_news_clean_text( $source );
+	$title  = hello_elementor_village_news_clean_text( $post->post_title );
+
+	if ( $title && 0 === strpos( $text, $title ) ) {
+		$text = trim( substr( $text, strlen( $title ) ) );
+	}
+
+	$months = 'Januari|Februari|Maret|April|Mei|Juni|Juli|Agustus|September|Oktober|November|Desember';
+	$text   = preg_replace( '/^\s*\d{1,2}\s+(?:' . $months . ')\s+\d{4}(?:,\s*\d{1,2}:\d{2}\s*WIB)?\s*/i', '', $text );
+
+	return wp_trim_words( trim( (string) $text ), 28, '...' );
+}
+
+/**
+ * Elementor header/footer assignments on imported posts bypass single.php.
+ * Keep village news details on the matching custom theme template.
+ *
+ * @param string $template Selected template path.
+ * @return string
+ */
+function hello_elementor_village_news_single_template( $template ) {
+	if ( ! is_singular( 'post' ) ) {
+		return $template;
+	}
+
+	$custom_template = HELLO_THEME_PATH . '/single.php';
+
+	return file_exists( $custom_template ) ? $custom_template : $template;
+}
+add_filter( 'template_include', 'hello_elementor_village_news_single_template', 9999 );
 
 if ( ! function_exists( 'hello_elementor_register_elementor_locations' ) ) {
 	/**

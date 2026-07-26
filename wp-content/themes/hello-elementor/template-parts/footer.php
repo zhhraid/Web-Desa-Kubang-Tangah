@@ -8,12 +8,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$footer_nav_menu = wp_nav_menu( [
-	'theme_location' => 'menu-2',
-	'fallback_cb' => false,
-	'container' => false,
-	'echo' => false,
-] );
+$whatsapp_url = function_exists( 'hello_elementor_village_whatsapp_url' ) ? hello_elementor_village_whatsapp_url() : 'https://api.whatsapp.com/send?phone=6285271664112';
+$footer_links  = [
+	[ 'label' => 'Beranda', 'path' => '/' ],
+	[ 'label' => 'Profil', 'path' => '/profil_desa/' ],
+	[ 'label' => 'Pemerintahan', 'path' => '/pemerintahan_desa/' ],
+	[ 'label' => 'Berita', 'path' => '/berita/' ],
+	[ 'label' => 'Data dan Infografis', 'path' => '/data-infografis/' ],
+	[ 'label' => 'Informasi', 'path' => '/data/' ],
+	[ 'label' => 'Galeri', 'path' => '/galeri/' ],
+];
 ?>
 <footer id="site-footer" class="site-footer village-footer">
 	<div class="village-footer__inner">
@@ -34,25 +38,17 @@ $footer_nav_menu = wp_nav_menu( [
 
 		<nav class="village-footer__links" aria-label="<?php echo esc_attr__( 'Footer menu', 'hello-elementor' ); ?>">
 			<h2>Tautan Cepat</h2>
-			<?php if ( $footer_nav_menu ) : ?>
-				<?php
-				// PHPCS - escaped by WordPress with "wp_nav_menu".
-				echo $footer_nav_menu; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-				?>
-			<?php else : ?>
-				<ul>
-					<?php
-					wp_list_pages( [
-						'title_li' => '',
-						'include' => '1370,5,6,1546,1514,7,8',
-					] );
-					?>
-				</ul>
-			<?php endif; ?>
+			<ul>
+				<?php foreach ( $footer_links as $footer_link ) : ?>
+					<li>
+						<a href="<?php echo esc_url( home_url( $footer_link['path'] ) ); ?>"><?php echo esc_html( $footer_link['label'] ); ?></a>
+					</li>
+				<?php endforeach; ?>
+			</ul>
 		</nav>
 
 		<section class="village-footer__contact" aria-label="Kontak Desa Kubang Tangah">
-			<h2>Kontak</h2>
+			<h2>Kontak Desa</h2>
 			<p>
 				<span>Alamat</span>
 				Dusun Luak Mani No.Desa, Kubang Tangah, Kec. Lembah Segar, Kota Sawahlunto, Sumatera Barat 27421
@@ -62,8 +58,8 @@ $footer_nav_menu = wp_nav_menu( [
 				<a href="mailto:desakubangtangah@gmail.com">desakubangtangah@gmail.com</a>
 			</p>
 			<p>
-				<span>Nomor Kontak</span>
-				<a href="tel:+6285271664112">0852-7166-4112</a>
+				<span>Layanan WhatsApp</span>
+				<a href="<?php echo esc_url( $whatsapp_url ); ?>" target="_blank" rel="noopener noreferrer">0852-7166-4112</a>
 			</p>
 		</section>
 	</div>
