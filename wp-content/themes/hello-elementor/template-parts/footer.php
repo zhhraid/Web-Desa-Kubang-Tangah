@@ -10,13 +10,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $whatsapp_url = function_exists( 'hello_elementor_village_whatsapp_url' ) ? hello_elementor_village_whatsapp_url() : 'https://api.whatsapp.com/send?phone=6285271664112';
 $footer_links  = [
-	[ 'label' => 'Beranda', 'path' => '/' ],
-	[ 'label' => 'Profil', 'path' => '/profil_desa/' ],
-	[ 'label' => 'Pemerintahan', 'path' => '/pemerintahan_desa/' ],
-	[ 'label' => 'Berita', 'path' => '/berita/' ],
-	[ 'label' => 'Statistik Desa', 'path' => '/data-infografis/' ],
-	[ 'label' => 'Informasi', 'path' => '/data/' ],
-	[ 'label' => 'Galeri', 'path' => '/galeri/' ],
+	[ 'label' => 'Beranda', 'url' => home_url( '/' ) ],
+	[ 'label' => 'Profil', 'url' => hello_elementor_village_page_url( 'profil-desa' ) ],
+	[ 'label' => 'Pemerintahan', 'url' => hello_elementor_village_page_url( 'pemerintahan-desa' ) ],
+	[ 'label' => 'Berita', 'url' => home_url( '/berita/' ) ],
+	[ 'label' => 'Statistik Desa', 'url' => hello_elementor_village_page_url( 'statistik-desa' ) ],
+	[ 'label' => 'Informasi', 'url' => hello_elementor_village_page_url( 'informasi-desa' ) ],
+	[ 'label' => 'Galeri', 'url' => home_url( '/galeri/' ) ],
 ];
 ?>
 <footer id="site-footer" class="site-footer village-footer">
@@ -41,7 +41,7 @@ $footer_links  = [
 			<ul>
 				<?php foreach ( $footer_links as $footer_link ) : ?>
 					<li>
-						<a href="<?php echo esc_url( home_url( $footer_link['path'] ) ); ?>"><?php echo esc_html( $footer_link['label'] ); ?></a>
+						<a href="<?php echo esc_url( $footer_link['url'] ); ?>"><?php echo esc_html( $footer_link['label'] ); ?></a>
 					</li>
 				<?php endforeach; ?>
 			</ul>

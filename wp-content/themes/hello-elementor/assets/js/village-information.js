@@ -29,6 +29,7 @@
 		sortDirection: 1,
 		sortKey: "name",
 	};
+	const customSelects = new Map();
 
 	const normalize = (value) =>
 		String(value || "")
@@ -74,6 +75,114 @@
 					: "none";
 		});
 	};
+
+	const getSelectLabel = (select) => {
+		const option = select?.selectedOptions?.[0];
+		return option ? option.textContent.trim() : "";
+	};
+
+	const closeCustomSelect = (wrapper) => {
+		const toggle = wrapper?.querySelector("[data-information-select-toggle]");
+		const menu = wrapper?.querySelector("[data-information-select-menu]");
+		if (!toggle || !menu) {
+			return;
+		}
+		toggle.setAttribute("aria-expanded", "false");
+		menu.hidden = true;
+	};
+
+	const closeOtherCustomSelects = (currentWrapper) => {
+		customSelects.forEach(({ wrapper }) => {
+			if (wrapper !== currentWrapper) {
+				closeCustomSelect(wrapper);
+			}
+		});
+	};
+
+	const syncCustomSelect = (select) => {
+		const instance = customSelects.get(select);
+		if (!instance) {
+			return;
+		}
+
+		instance.toggle.textContent = getSelectLabel(select);
+		instance.options.forEach((optionButton) => {
+			const isSelected = optionButton.dataset.value === select.value;
+			optionButton.classList.toggle("is-active", isSelected);
+			optionButton.setAttribute("aria-selected", isSelected ? "true" : "false");
+		});
+	};
+
+	const setupCustomSelect = (select) => {
+		if (!select || customSelects.has(select)) {
+			return;
+		}
+
+		const wrapper = document.createElement("div");
+		const toggle = document.createElement("button");
+		const menu = document.createElement("div");
+		const optionButtons = [];
+
+		wrapper.className = "village-information__select";
+		toggle.type = "button";
+		toggle.dataset.informationSelectToggle = "";
+		toggle.setAttribute("aria-expanded", "false");
+		toggle.setAttribute("aria-haspopup", "listbox");
+		toggle.textContent = getSelectLabel(select);
+
+		menu.className = "village-information__select-menu";
+		menu.dataset.informationSelectMenu = "";
+		menu.setAttribute("role", "listbox");
+		menu.hidden = true;
+
+		Array.from(select.options).forEach((option) => {
+			const optionButton = document.createElement("button");
+			optionButton.type = "button";
+			optionButton.dataset.value = option.value;
+			optionButton.setAttribute("role", "option");
+			optionButton.textContent = option.textContent.trim();
+			optionButton.addEventListener("click", () => {
+				select.value = option.value;
+				select.dispatchEvent(new Event("change", { bubbles: true }));
+				closeCustomSelect(wrapper);
+				toggle.focus();
+			});
+			optionButtons.push(optionButton);
+			menu.appendChild(optionButton);
+		});
+
+		select.classList.add("village-information__native-select");
+		select.parentNode.insertBefore(wrapper, select);
+		wrapper.append(toggle, menu, select);
+		customSelects.set(select, { wrapper, toggle, menu, options: optionButtons });
+		syncCustomSelect(select);
+
+		toggle.addEventListener("click", () => {
+			const willOpen = menu.hidden;
+			closeOtherCustomSelects(wrapper);
+			menu.hidden = !willOpen;
+			toggle.setAttribute("aria-expanded", willOpen ? "true" : "false");
+		});
+
+		select.addEventListener("change", () => syncCustomSelect(select));
+	};
+
+	[assistance, decile, pageSize].forEach(setupCustomSelect);
+
+	document.addEventListener("click", (event) => {
+		customSelects.forEach(({ wrapper }) => {
+			if (!wrapper.contains(event.target)) {
+				closeCustomSelect(wrapper);
+			}
+		});
+	});
+
+	document.addEventListener("keydown", (event) => {
+		if (event.key !== "Escape") {
+			return;
+		}
+		customSelects.forEach(({ wrapper }) => closeCustomSelect(wrapper));
+	});
 
 	const render = () => {
 		if (!body) {
@@ -167,7 +276,9 @@
 		}
 		if (decile) {
 			decile.value = "";
+			syncCustomSelect(decile);
 		}
+		syncCustomSelect(assistance);
 		state.page = 1;
 		render();
 		search?.focus();

@@ -5,14 +5,18 @@ document.addEventListener("DOMContentLoaded", () => {
 		return;
 	}
 
+	document.body.classList.add("village-infographics-page-body");
+
 	const regionSelect = root.querySelector("[data-region]");
-	const graphControls = root.querySelector("[data-graph-controls]");
+	const regionPicker = root.querySelector("[data-region-picker]");
+	const regionToggle = root.querySelector("[data-region-toggle]");
+	const regionMenu = root.querySelector("[data-region-menu]");
 	const sectionElements = Array.from(root.querySelectorAll("[data-section]"));
 	const jumpLinks = Array.from(root.querySelectorAll("[data-jump]"));
 	const viewButtons = Array.from(root.querySelectorAll("[data-stat-view]"));
 	const statPanels = Array.from(root.querySelectorAll("[data-stat-panel]"));
+	const graphControls = root.querySelector("[data-graph-controls]");
 	const navTargets = [root.querySelector("[data-nav-section]"), ...sectionElements].filter(Boolean);
-	const summaryNumbers = Array.from(root.querySelectorAll("[data-summary-number]"));
 	const numberFormat = new Intl.NumberFormat("id-ID");
 	const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 	const palette = ["#25734a", "#2f8f8b", "#d6a23a", "#d66b52", "#5276a7", "#8a5f8f", "#75a84f", "#b77945", "#3f9ac1", "#89935c", "#77827d"];
@@ -37,35 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const formatRupiahShort = (value) => `Rp ${formatDecimal(Number(value || 0) / 1000000, 2)} jt`;
 
-	const animateSummaryNumber = (element) => {
-		const value = Number(element.dataset.summaryNumber);
-		const decimals = Number(element.dataset.summaryDecimals || 0);
-		const formatter = new Intl.NumberFormat("id-ID", {
-			minimumFractionDigits: decimals,
+	const formatShare = (value, decimals = 2) =>
+		`${new Intl.NumberFormat("id-ID", {
 			maximumFractionDigits: decimals,
-		});
-
-		if (!Number.isFinite(value) || reducedMotion) {
-			element.textContent = formatter.format(value);
-			return;
-		}
-
-		const duration = 1050;
-		const start = performance.now();
-		const update = (now) => {
-			const progress = Math.min((now - start) / duration, 1);
-			const easedProgress = 1 - Math.pow(1 - progress, 3);
-			const current = decimals ? value * easedProgress : Math.round(value * easedProgress);
-			element.textContent = formatter.format(current);
-			if (progress < 1) {
-				window.requestAnimationFrame(update);
-			}
-		};
-
-		window.requestAnimationFrame(update);
-	};
-
-	summaryNumbers.forEach(animateSummaryNumber);
+		}).format(Number(value || 0))}%`;
 
 	const setTooltip = (element, label, value, total, unit = "") => {
 		const share = total ? Math.round((value / total) * 1000) / 10 : 0;
@@ -77,6 +56,80 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 
 	const getSelectedRegion = () => (regionSelect ? regionSelect.value : "all");
+
+	const getRegionOptionButtons = () => Array.from(root.querySelectorAll("[data-region-option]"));
+
+	const closeRegionMenu = () => {
+		if (!regionMenu || !regionToggle) {
+			return;
+		}
+
+		regionMenu.hidden = true;
+		regionToggle.setAttribute("aria-expanded", "false");
+	};
+
+	const setSelectedRegion = (value, label, shouldRender = true) => {
+		if (regionSelect) {
+			regionSelect.value = value;
+		}
+
+		if (regionToggle) {
+			regionToggle.textContent = label;
+		}
+
+		getRegionOptionButtons().forEach((button) => {
+			const isActive = button.dataset.regionOption === value;
+			button.classList.toggle("is-active", isActive);
+			button.setAttribute("aria-selected", String(isActive));
+		});
+
+		if (shouldRender) {
+			renderAll();
+		}
+	};
+
+	const setupRegionOption = (button) => {
+		if (button.dataset.regionReady === "true") {
+			return;
+		}
+
+		button.dataset.regionReady = "true";
+		button.addEventListener("click", () => {
+			setSelectedRegion(button.dataset.regionOption || "all", button.textContent.trim());
+			closeRegionMenu();
+		});
+	};
+
+	if (regionToggle && regionMenu) {
+		getRegionOptionButtons().forEach(setupRegionOption);
+
+		regionToggle.addEventListener("click", () => {
+			const isOpen = regionMenu.hidden;
+			regionMenu.hidden = !isOpen;
+			regionToggle.setAttribute("aria-expanded", String(isOpen));
+		});
+
+		document.addEventListener("click", (event) => {
+			if (regionPicker && !regionPicker.contains(event.target)) {
+				closeRegionMenu();
+			}
+		});
+
+		document.addEventListener("keydown", (event) => {
+			if (event.key === "Escape") {
+				closeRegionMenu();
+			}
+		});
+	}
+
+	const setupHeaderVisibility = () => {
+		const update = () => {
+			document.body.classList.toggle("village-infographics-header-hidden", window.scrollY > 80);
+		};
+
+		update();
+		window.addEventListener("scroll", update, { passive: true });
+	};
 
 	const getValues = (dataset) => {
 		const selectedRegion = getSelectedRegion();
@@ -92,6 +145,46 @@ document.addEventListener("DOMContentLoaded", () => {
 			return "Seluruh Desa";
 		}
 		return `Dusun ${selectedRegion}`;
+	};
+
+	const sumValues = (values) => values.reduce((sum, value) => sum + Number(value || 0), 0);
+
+	const getProductiveStats = (dataset, pyramidValues) => {
+		const values = pyramidValues || getPyramidValues(dataset);
+		const male = values.male || [];
+		const female = values.female || [];
+		const indexes = (dataset.categories || [])
+			.map((category, index) => {
+				const firstAge = Number(String(category).split("-")[0].replace(/\D/g, ""));
+				return Number.isFinite(firstAge) && firstAge >= 15 && firstAge <= 64 ? index : -1;
+			})
+			.filter((index) => index >= 0);
+		const maleTotal = indexes.reduce((sum, index) => sum + Number(male[index] || 0), 0);
+		const femaleTotal = indexes.reduce((sum, index) => sum + Number(female[index] || 0), 0);
+		const total = maleTotal + femaleTotal;
+		const populationTotal = sumValues(male) + sumValues(female);
+
+		return {
+			male: maleTotal,
+			female: femaleTotal,
+			total,
+			share: populationTotal ? (total / populationTotal) * 100 : 0,
+		};
+	};
+
+	const getCreativeData = (dataset) => {
+		const selectedRegion = getSelectedRegion();
+		const products = dataset.products || {};
+		const byDusun = dataset.byDusun || {};
+		const isRegion = selectedRegion !== "all" && byDusun.byProduct && byDusun.byProduct[selectedRegion];
+
+		return {
+			categories: products.categories || [],
+			values: isRegion ? byDusun.byProduct[selectedRegion] : products.total || [],
+			valueMeta: isRegion ? [] : products.value || [],
+			isAll: !isRegion,
+			selectedRegion,
+		};
 	};
 
 	const createGradient = (values, colors = palette) => {
@@ -185,10 +278,10 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 
 		const note = createElement("p", "village-home__pyramid-note");
-		const productive = dataset.productive || {};
+		const productive = getProductiveStats(dataset, values);
 		note.textContent = `Usia produktif 15-64 tahun: ${numberFormat.format(productive.total || 0)} jiwa (${formatDecimal(productive.share || 0, 2)}%), terdiri dari ${numberFormat.format(productive.male || 0)} laki-laki dan ${numberFormat.format(productive.female || 0)} perempuan.`;
 		chart.append(wrapper, note);
-		renderLegend(legend, ["Perempuan", "Laki-laki"]);
+		legend.replaceChildren();
 	};
 
 	const renderBars = (chart, legend, dataset) => {
@@ -324,11 +417,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 
 	const renderCreative = (chart, legend, dataset) => {
-		const selectedRegion = getSelectedRegion();
-		const isAll = selectedRegion === "all";
-		const categories = isAll ? dataset.byDusun.categories : dataset.products.categories;
-		const values = isAll ? dataset.byDusun.total : dataset.byDusun.byProduct[selectedRegion] || dataset.products.total;
-		const total = values.reduce((sum, value) => sum + Number(value || 0), 0);
+		const creativeData = getCreativeData(dataset);
+		const categories = creativeData.categories;
+		const values = creativeData.values;
+		const total = sumValues(values);
 		const maximum = Math.max(...values, 1);
 		const wrapper = createElement("div", "village-home__creative-chart");
 		const bars = createElement("div", "village-home__creative-bars");
@@ -338,25 +430,146 @@ document.addEventListener("DOMContentLoaded", () => {
 			const item = createElement("div", "village-home__creative-item");
 			const track = createElement("div", "village-home__creative-track");
 			const fill = createElement("span", "village-home__creative-fill");
+			const label = createElement("div", "village-home__creative-label");
 			fill.style.setProperty("--bar-size", `${(value / maximum) * 100}%`);
 			fill.style.backgroundColor = palette[index % palette.length];
-			setTooltip(fill, category, value, total, "pelaku");
+			setTooltip(fill, category, value, total, "unit usaha");
 			track.append(fill);
-			item.append(createElement("strong", "", numberFormat.format(value)), track, createElement("span", "", category));
+			label.append(createElement("span", "", category));
+			if (creativeData.valueMeta[index]) {
+				label.append(createElement("small", "", `${formatRupiahShort(creativeData.valueMeta[index])}/tahun`));
+			}
+			item.append(createElement("strong", "", numberFormat.format(value)), track, label);
 			bars.append(item);
 		});
 
 		const summary = createElement("aside", "village-home__creative-summary");
+		const topIndex = values.indexOf(Math.max(...values, 0));
+		const summaryTotal = creativeData.isAll ? dataset.summary.totalActors || total : total;
 		summary.append(
 			createElement("span", "", "Ringkasan Produk"),
-			createElement("strong", "", numberFormat.format(dataset.summary.totalActors || 0)),
-			createElement("p", "", `Pelaku ekonomi kreatif dengan nilai produksi total ${formatRupiahShort(dataset.summary.totalProductionValue || 0)} per tahun.`),
-			createElement("p", "", `${formatDecimal(dataset.summary.individualShare || 0, 2)}% pelaku berbentuk usaha perorangan.`)
+			createElement("strong", "", numberFormat.format(summaryTotal)),
+			createElement("p", "", creativeData.isAll ? `Unit usaha ekonomi kreatif dengan nilai produksi total ${formatRupiahShort(dataset.summary.totalProductionValue || 0)} per tahun.` : `Unit usaha ekonomi kreatif di Dusun ${creativeData.selectedRegion}.`),
+			createElement("p", "", categories[topIndex] ? `${categories[topIndex]} menjadi produk dengan jumlah unit usaha terbanyak pada tampilan ini.` : "Data produk belum tersedia.")
 		);
+
+		if (dataset.subsectors && dataset.subsectors.categories) {
+			const subsectorTotal = sumValues(dataset.subsectors.total || []);
+			const subsectors = createElement("div", "village-home__creative-subsectors");
+			dataset.subsectors.categories.forEach((category, index) => {
+				const value = Number((dataset.subsectors.total || [])[index] || 0);
+				const share = subsectorTotal ? (value / subsectorTotal) * 100 : 0;
+				subsectors.append(createElement("p", "", `${category}: ${numberFormat.format(value)} unit usaha (${formatDecimal(share, 1)}%)`));
+			});
+			summary.append(subsectors);
+		}
 
 		wrapper.append(bars, summary);
 		chart.append(wrapper);
-		renderLegend(legend, dataset.products.categories);
+
+		const capacityBands = dataset.products && dataset.products.capacityBands ? dataset.products.capacityBands : {};
+		const capacityGrid = createElement("div", "village-home__capacity-grid");
+		Object.keys(capacityBands).forEach((productName) => {
+			const bands = capacityBands[productName] || [];
+			const bandMaximum = Math.max(...bands.map((band) => Number(band.count || 0)), 1);
+			const card = createElement("div", "village-home__capacity-card");
+			card.append(createElement("h4", "", productName));
+			bands.forEach((band) => {
+				const row = createElement("div", "village-home__capacity-row");
+				const track = createElement("span", "village-home__capacity-track");
+				const fill = createElement("i");
+				const count = Number(band.count || 0);
+				fill.style.setProperty("--bar-size", `${(count / bandMaximum) * 100}%`);
+				track.append(fill);
+				row.append(createElement("span", "", band.label), track, createElement("strong", "", numberFormat.format(count)));
+				card.append(row);
+			});
+			capacityGrid.append(card);
+		});
+
+		if (capacityGrid.childElementCount) {
+			chart.append(capacityGrid);
+		}
+		renderLegend(legend, categories);
+	};
+
+	const renderHousing = (chart, legend, dataset) => {
+		const groups = dataset.groups || {};
+		const wrapper = createElement("div", "village-home__housing-grid");
+
+		Object.keys(groups).forEach((groupName, groupIndex) => {
+			const group = groups[groupName] || {};
+			const categories = group.categories || [];
+			const values = group.total || [];
+			const groupTotal = sumValues(values);
+			const maximum = Math.max(...values, 1);
+			const card = createElement("div", "village-home__housing-card");
+			const head = createElement("div", "village-home__housing-head");
+			head.append(createElement("h4", "", groupName), createElement("span", "", `${numberFormat.format(groupTotal)} rumah tercatat`));
+			card.append(head);
+
+			categories.forEach((category, index) => {
+				const value = Number(values[index] || 0);
+				const share = groupTotal ? (value / groupTotal) * 100 : 0;
+				const row = createElement("div", "village-home__housing-row");
+				const track = createElement("span", "village-home__housing-track");
+				const fill = createElement("i");
+				fill.style.setProperty("--bar-size", `${(value / maximum) * 100}%`);
+				fill.style.backgroundColor = palette[(groupIndex + index) % palette.length];
+				track.append(fill);
+				row.append(createElement("span", "", category), track, createElement("strong", "", numberFormat.format(value)), createElement("small", "", `${formatDecimal(share, 1)}%`));
+				setTooltip(row, `${groupName} - ${category}`, value, groupTotal, "rumah");
+				card.append(row);
+			});
+
+			wrapper.append(card);
+		});
+
+		chart.append(wrapper);
+		legend.replaceChildren();
+	};
+
+	const renderAssets = (chart, legend, dataset) => {
+		const selectedRegion = getSelectedRegion();
+		const byDusun = dataset.byDusun || {};
+		const categories = dataset.categories || [];
+		const regions = selectedRegion === "all" ? Object.keys(byDusun) : [selectedRegion].filter((region) => byDusun[region]);
+		const displayedValues = regions.reduce((items, region) => items.concat(byDusun[region] || []), []);
+		const maximum = Math.max(...displayedValues, ...(dataset.total || []), 1);
+		const wrapper = createElement("div", "village-home__asset-grid");
+
+		if (selectedRegion === "all" && dataset.total) {
+			const summary = createElement("div", "village-home__asset-summary");
+			categories.forEach((category, index) => {
+				const value = Number(dataset.total[index] || 0);
+				const item = createElement("div");
+				item.append(createElement("span", "", category), createElement("strong", "", numberFormat.format(value)));
+				summary.append(item);
+			});
+			chart.append(summary);
+		}
+
+		regions.forEach((region) => {
+			const values = byDusun[region] || [];
+			const card = createElement("div", "village-home__asset-card");
+			card.append(createElement("h4", "", region));
+			categories.forEach((category, index) => {
+				const value = Number(values[index] || 0);
+				const row = createElement("div", "village-home__asset-row");
+				const track = createElement("span", "village-home__asset-track");
+				const fill = createElement("i");
+				fill.style.setProperty("--bar-size", `${(value / maximum) * 100}%`);
+				fill.style.backgroundColor = palette[index % palette.length];
+				track.append(fill);
+				row.append(createElement("span", "", category), track, createElement("strong", "", numberFormat.format(value)));
+				setTooltip(row, `${category} di ${region}`, value, sumValues(values), "catatan");
+				card.append(row);
+			});
+			wrapper.append(card);
+		});
+
+		chart.append(wrapper);
+		renderLegend(legend, categories);
 	};
 
 	const revealChart = (chart) => {
@@ -367,33 +580,75 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 
 	const updateInsight = (section, dataset, values, total, unit) => {
+		if (!values.length) {
+			section.querySelector("[data-insight-value]").textContent = "0";
+			section.querySelector("[data-insight-title]").textContent = "Data belum tersedia";
+			section.querySelector("[data-insight-copy]").textContent = "Belum ada data yang dapat diringkas.";
+			return;
+		}
 		const maximum = Math.max(...values);
 		const topIndex = values.indexOf(maximum);
 		const share = total ? Math.round((maximum / total) * 1000) / 10 : 0;
 		const scope = getScopeLabel(dataset).toLowerCase();
-		section.querySelector("[data-insight-value]").textContent = numberFormat.format(maximum);
+		section.querySelector("[data-insight-value]").textContent = formatShare(share);
 		section.querySelector("[data-insight-title]").textContent = dataset.categories[topIndex];
-		section.querySelector("[data-insight-copy]").textContent = `${numberFormat.format(share)}% dari ${numberFormat.format(total)} ${unit} di ${scope}.`;
+		section.querySelector("[data-insight-copy]").textContent = `${numberFormat.format(maximum)} dari ${numberFormat.format(total)} ${unit} di ${scope}.`;
 	};
 
-	const updatePyramidInsight = (section, dataset, total) => {
-		const productive = dataset.productive || {};
+	const updatePyramidInsight = (section, dataset, total, pyramidValues) => {
+		const productive = getProductiveStats(dataset, pyramidValues);
 		const scope = getSelectedRegion() === "all" ? "struktur umur desa" : `struktur umur Dusun ${getSelectedRegion()}`;
-		section.querySelector("[data-insight-value]").textContent = numberFormat.format(productive.total || 0);
+		section.querySelector("[data-insight-value]").textContent = formatShare(productive.share || 0);
 		section.querySelector("[data-insight-title]").textContent = "Usia produktif 15-64 tahun";
-		section.querySelector("[data-insight-copy]").textContent = `${formatDecimal(productive.share || 0, 2)}% dari ${numberFormat.format(total)} jiwa pada ${scope}.`;
+		section.querySelector("[data-insight-copy]").textContent = `${numberFormat.format(productive.total || 0)} dari ${numberFormat.format(total)} jiwa pada ${scope}.`;
 	};
 
 	const updateCreativeInsight = (section, dataset) => {
-		const values = getSelectedRegion() === "all" ? dataset.byDusun.total : dataset.byDusun.byProduct[getSelectedRegion()] || dataset.products.total;
-		const categories = getSelectedRegion() === "all" ? dataset.byDusun.categories : dataset.products.categories;
-		const maximum = Math.max(...values);
+		const creativeData = getCreativeData(dataset);
+		const values = creativeData.values;
+		const categories = creativeData.categories;
+		const maximum = Math.max(...values, 0);
 		const topIndex = values.indexOf(maximum);
-		section.querySelector("[data-insight-value]").textContent = numberFormat.format(maximum);
+		const total = sumValues(values);
+		const share = total ? (maximum / total) * 100 : 0;
+		const scope = creativeData.isAll ? "seluruh desa" : `Dusun ${creativeData.selectedRegion}`;
+		section.querySelector("[data-insight-value]").textContent = formatShare(share);
 		section.querySelector("[data-insight-title]").textContent = categories[topIndex];
-		section.querySelector("[data-insight-copy]").textContent = getSelectedRegion() === "all"
-			? "Wilayah dengan pelaku ekonomi kreatif terbanyak."
-			: "Produk unggulan terbanyak pada dusun yang dipilih.";
+		section.querySelector("[data-insight-copy]").textContent = `${numberFormat.format(maximum)} dari ${numberFormat.format(total)} unit usaha ekonomi kreatif di ${scope}.`;
+	};
+
+	const updateHousingInsight = (section, dataset) => {
+		const groups = dataset.groups || {};
+		const rows = [];
+		Object.keys(groups).forEach((groupName) => {
+			const group = groups[groupName] || {};
+			(group.categories || []).forEach((category, index) => {
+				rows.push({
+					groupName,
+					category,
+					value: Number((group.total || [])[index] || 0),
+					total: sumValues(group.total || []),
+				});
+			});
+		});
+		const top = rows.sort((first, second) => second.value - first.value)[0] || { groupName: "Rumah", category: "Data belum tersedia", value: 0, total: 0 };
+		const share = top.total ? (top.value / top.total) * 100 : 0;
+		section.querySelector("[data-insight-value]").textContent = formatShare(share);
+		section.querySelector("[data-insight-title]").textContent = `${top.groupName}: ${top.category}`;
+		section.querySelector("[data-insight-copy]").textContent = `${numberFormat.format(top.value)} dari ${numberFormat.format(top.total)} rumah pada data ${top.groupName.toLowerCase()}.`;
+	};
+
+	const updateAssetsInsight = (section, dataset) => {
+		const selectedRegion = getSelectedRegion();
+		const values = selectedRegion === "all" ? dataset.total || [] : dataset.byDusun && dataset.byDusun[selectedRegion] ? dataset.byDusun[selectedRegion] : [];
+		const total = sumValues(values);
+		const maximum = Math.max(...values, 0);
+		const topIndex = values.indexOf(maximum);
+		const share = total ? (maximum / total) * 100 : 0;
+		const scope = selectedRegion === "all" ? "seluruh desa" : `Dusun ${selectedRegion}`;
+		section.querySelector("[data-insight-value]").textContent = formatShare(share);
+		section.querySelector("[data-insight-title]").textContent = (dataset.categories || [])[topIndex] || "Data aset";
+		section.querySelector("[data-insight-copy]").textContent = `${numberFormat.format(maximum)} dari ${numberFormat.format(total)} catatan aset pada ${scope}.`;
 	};
 
 	const renderSection = (section) => {
@@ -414,18 +669,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		if (type === "pyramid") {
 			const pyramidValues = getPyramidValues(dataset);
-			const total = [...(pyramidValues.male || []), ...(pyramidValues.female || [])].reduce((sum, value) => sum + Number(value || 0), 0);
+			const total = sumValues([...(pyramidValues.male || []), ...(pyramidValues.female || [])]);
 			section.querySelector("[data-total]").textContent = `${getSelectedRegion() === "all" ? "Seluruh Desa" : `Dusun ${getSelectedRegion()}`} - ${numberFormat.format(total)} ${unit}`;
 			renderPyramid(chart, legend, dataset, unit);
-			updatePyramidInsight(section, dataset, total);
+			updatePyramidInsight(section, dataset, total, pyramidValues);
 		} else if (type === "creative") {
-			const total = dataset.summary ? dataset.summary.totalActors : 0;
-			section.querySelector("[data-total]").textContent = `${getSelectedRegion() === "all" ? "Seluruh Desa" : `Dusun ${getSelectedRegion()}`} - ${numberFormat.format(total)} pelaku`;
+			const creativeData = getCreativeData(dataset);
+			const total = sumValues(creativeData.values);
+			section.querySelector("[data-total]").textContent = `${getSelectedRegion() === "all" ? "Seluruh Desa" : `Dusun ${getSelectedRegion()}`} - ${numberFormat.format(total)} unit usaha`;
 			renderCreative(chart, legend, dataset);
 			updateCreativeInsight(section, dataset);
+		} else if (type === "housing") {
+			const houses = Number(dataset.houses || 0);
+			section.querySelector("[data-total]").textContent = `${numberFormat.format(houses)} rumah tercatat`;
+			renderHousing(chart, legend, dataset);
+			updateHousingInsight(section, dataset);
+		} else if (type === "assets") {
+			const selectedRegion = getSelectedRegion();
+			const values = selectedRegion === "all" ? dataset.total || [] : dataset.byDusun && dataset.byDusun[selectedRegion] ? dataset.byDusun[selectedRegion] : [];
+			const total = sumValues(values);
+			const scope = selectedRegion === "all" ? "Seluruh Desa" : `Dusun ${selectedRegion}`;
+			section.querySelector("[data-total]").textContent = `${scope} - ${numberFormat.format(total)} ${unit}`;
+			renderAssets(chart, legend, dataset);
+			updateAssetsInsight(section, dataset);
 		} else {
 			const values = getValues(dataset);
-			const total = values.reduce((sum, value) => sum + Number(value || 0), 0);
+			const total = sumValues(values);
 			const scope = getScopeLabel(dataset);
 			section.querySelector("[data-total]").textContent = `${scope} - ${numberFormat.format(total)} ${unit}`;
 
@@ -460,52 +729,124 @@ document.addEventListener("DOMContentLoaded", () => {
 		sectionElements.forEach(renderSection);
 	};
 
+	const setActiveView = (view, shouldUpdateHash = false) => {
+		const activeView = view === "infografis" ? "infografis" : "grafik";
+
+		viewButtons.forEach((button) => {
+			const isActive = button.dataset.statView === activeView;
+			button.classList.toggle("is-active", isActive);
+			button.setAttribute("aria-selected", String(isActive));
+		});
+
+		statPanels.forEach((panel) => {
+			const isActive = panel.dataset.statPanel === activeView;
+			panel.hidden = !isActive;
+			panel.classList.toggle("is-active", isActive);
+		});
+
+		if (graphControls) {
+			graphControls.hidden = activeView !== "grafik";
+		}
+
+		if (activeView === "grafik") {
+			renderAll();
+		}
+
+		if (shouldUpdateHash) {
+			window.history.replaceState(null, "", activeView === "infografis" ? "#infografis" : "#grafik");
+		}
+	};
+
 	const setActiveJump = (key) => {
 		jumpLinks.forEach((link) => link.classList.toggle("is-active", link.dataset.jump === key));
 	};
 
-	const setActiveView = (view) => {
-		viewButtons.forEach((button) => {
-			const isActive = button.dataset.statView === view;
-			button.classList.toggle("is-active", isActive);
-			button.setAttribute("aria-selected", isActive ? "true" : "false");
-		});
-		statPanels.forEach((panel) => {
-			const isActive = panel.dataset.statPanel === view;
-			panel.hidden = !isActive;
-			panel.classList.toggle("is-active", isActive);
-		});
-		if (graphControls) {
-			graphControls.hidden = view !== "grafik";
-		}
-		if (view === "grafik") {
-			renderAll();
-		}
-	};
-
 	viewButtons.forEach((button) => {
 		button.addEventListener("click", () => {
-			setActiveView(button.dataset.statView);
+			setActiveView(button.dataset.statView, true);
 		});
 	});
 
 	jumpLinks.forEach((link) => {
 		link.addEventListener("click", (event) => {
 			event.preventDefault();
-			setActiveView("grafik");
 			const targetId = link.dataset.jump === "all" ? "ringkasan" : link.dataset.jump;
 			const target = root.querySelector(`#${targetId}`);
 			if (!target) {
 				return;
 			}
+			setActiveView("grafik");
 			setActiveJump(link.dataset.jump);
 			target.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
 			window.history.replaceState(null, "", `#${link.dataset.jump}`);
 		});
 	});
 
+	const setupInfographicCarousel = () => {
+		const track = root.querySelector("[data-infographic-track]");
+		const openButtons = Array.from(root.querySelectorAll("[data-infographic-open]"));
+		const dialog = root.querySelector("[data-infographic-dialog]");
+		const dialogImage = root.querySelector("[data-infographic-dialog-image]");
+		const dialogTitle = root.querySelector("[data-infographic-dialog-title]");
+		const closeButton = root.querySelector("[data-infographic-close]");
+
+		if (!track) {
+			return;
+		}
+
+		const closeDialog = () => {
+			if (!dialog) {
+				return;
+			}
+			if (typeof dialog.close === "function" && dialog.open) {
+				dialog.close();
+			} else {
+				dialog.removeAttribute("open");
+			}
+			dialog.hidden = true;
+			dialog.classList.remove("is-open");
+		};
+
+		const openDialog = (button) => {
+			if (!dialog || !dialogImage) {
+				return;
+			}
+			dialogImage.src = button.dataset.fullImage || "";
+			dialogImage.alt = button.dataset.fullAlt || button.dataset.fullTitle || "Infografis Desa Kubang Tangah";
+			if (dialogTitle) {
+				dialogTitle.textContent = button.dataset.fullTitle || "";
+			}
+			dialog.hidden = false;
+			dialog.classList.add("is-open");
+			if (typeof dialog.showModal === "function" && !dialog.open) {
+				dialog.showModal();
+			} else {
+				dialog.setAttribute("open", "");
+			}
+		};
+
+		openButtons.forEach((button) => {
+			button.addEventListener("click", () => openDialog(button));
+		});
+
+		closeButton?.addEventListener("click", closeDialog);
+		dialog?.addEventListener("click", (event) => {
+			if (event.target === dialog) {
+				closeDialog();
+			}
+		});
+		document.addEventListener("keydown", (event) => {
+			if (event.key === "Escape") {
+				closeDialog();
+			}
+		});
+	};
+
 	if (regionSelect) {
-		regionSelect.addEventListener("change", renderAll);
+		regionSelect.addEventListener("change", () => {
+			const selected = regionSelect.options[regionSelect.selectedIndex];
+			setSelectedRegion(regionSelect.value, selected ? selected.textContent : "Semua Dusun");
+		});
 	}
 
 	if ("IntersectionObserver" in window) {
@@ -533,6 +874,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		navTargets.forEach((section) => sectionObserver.observe(section));
 	}
 
+	setupHeaderVisibility();
+	setupInfographicCarousel();
+
 	fetch(root.dataset.source)
 		.then((response) => {
 			if (!response.ok) {
@@ -547,14 +891,24 @@ document.addEventListener("DOMContentLoaded", () => {
 					const option = createElement("option", "", `Dusun ${region}`);
 					option.value = region;
 					regionSelect.append(option);
+
+					if (regionMenu) {
+						const button = createElement("button", "", `Dusun ${region}`);
+						button.type = "button";
+						button.dataset.regionOption = region;
+						button.setAttribute("role", "option");
+						button.setAttribute("aria-selected", "false");
+						regionMenu.append(button);
+						setupRegionOption(button);
+					}
 				});
 			}
-			const initialSection = window.location.hash === "#ringkasan" || !window.location.hash ? "all" : window.location.hash.slice(1);
+			const initialHash = window.location.hash.replace("#", "");
+			const initialSection = !initialHash || initialHash === "ringkasan" || initialHash === "grafik" || initialHash === "infografis" ? "all" : initialHash;
 			setActiveJump(initialSection);
 			renderAll();
-			if (window.location.hash === "#infografik") {
-				setActiveView("infografik");
-			}
+			setSelectedRegion(getSelectedRegion(), regionToggle ? regionToggle.textContent.trim() : "Semua Dusun", false);
+			setActiveView(initialHash === "infografis" ? "infografis" : "grafik");
 		})
 		.catch(() => {
 			sectionElements.forEach((section) => {

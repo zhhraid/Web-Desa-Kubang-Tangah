@@ -530,6 +530,115 @@ body.page-id-1546 .village-header {
 	padding-right: 38px;
 }
 
+.village-information__select {
+	position: relative;
+	width: 100%;
+}
+
+.village-information__select > button[data-information-select-toggle] {
+	appearance: none;
+	-webkit-backdrop-filter: blur(14px) saturate(1.12);
+	backdrop-filter: blur(14px) saturate(1.12);
+	background:
+		linear-gradient(45deg, transparent 50%, var(--information-green) 50%) calc(100% - 20px) 20px / 5px 5px no-repeat,
+		linear-gradient(135deg, var(--information-green) 50%, transparent 50%) calc(100% - 15px) 20px / 5px 5px no-repeat,
+		linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(232, 246, 238, 0.88));
+	border: 1px solid rgba(186, 211, 197, 0.96);
+	border-radius: 999px;
+	box-shadow: 0 10px 22px rgba(20, 87, 52, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.96);
+	color: var(--information-ink);
+	cursor: pointer;
+	font: inherit;
+	font-size: 14px;
+	font-weight: 800;
+	height: 47px;
+	margin: 0;
+	min-width: 100%;
+	overflow: hidden;
+	padding: 10px 42px 10px 15px;
+	text-align: left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.village-information__table-meta .village-information__select {
+	min-width: 86px;
+	width: auto;
+}
+
+.village-information__table-meta .village-information__select > button[data-information-select-toggle] {
+	background-position: calc(100% - 18px) 17px, calc(100% - 13px) 17px, 0 0;
+	font-size: 13px;
+	height: 40px;
+	min-width: 84px;
+	padding-block: 6px;
+}
+
+.village-information__select > button[data-information-select-toggle]:hover,
+.village-information__select > button[data-information-select-toggle]:focus-visible {
+	border-color: var(--information-green);
+	box-shadow: 0 0 0 4px rgba(37, 136, 86, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.96);
+	outline: none;
+}
+
+.village-information__select-menu {
+	-webkit-backdrop-filter: blur(18px) saturate(1.16);
+	backdrop-filter: blur(18px) saturate(1.16);
+	background: linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(232, 246, 238, 0.9));
+	border: 1px solid rgba(186, 211, 197, 0.95);
+	border-radius: 18px;
+	box-shadow: 0 18px 40px rgba(16, 61, 41, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.96);
+	display: grid;
+	gap: 5px;
+	left: 0;
+	min-width: 100%;
+	padding: 7px;
+	position: absolute;
+	top: calc(100% + 8px);
+	z-index: 90;
+}
+
+.village-information__select-menu[hidden] {
+	display: none;
+}
+
+.village-information__select-menu button {
+	background: transparent;
+	border: 0;
+	border-radius: 999px;
+	color: #315442;
+	cursor: pointer;
+	font: inherit;
+	font-size: 13px;
+	font-weight: 800;
+	line-height: 1.25;
+	padding: 10px 13px;
+	text-align: left;
+	width: 100%;
+}
+
+.village-information__select-menu button:hover,
+.village-information__select-menu button:focus-visible {
+	background: rgba(255, 255, 255, 0.78);
+	color: var(--information-green);
+	outline: none;
+}
+
+.village-information__select-menu button.is-active {
+	background: linear-gradient(135deg, var(--information-green), var(--information-bright));
+	box-shadow: 0 8px 18px rgba(37, 136, 86, 0.22);
+	color: #ffffff;
+}
+
+.village-information .village-information__native-select {
+	height: 1px;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	width: 1px;
+}
+
 .village-information__toolbar input:focus,
 .village-information__toolbar select:focus,
 .village-information__table-meta select:focus {
@@ -981,6 +1090,11 @@ html.information-motion-ready .village-information__data-heading.is-visible {
 		align-items: flex-start;
 		flex-direction: column;
 		gap: 12px;
+	}
+
+	.village-information__table-meta label,
+	.village-information__table-meta .village-information__select {
+		width: 100%;
 	}
 
 	.village-information__table-wrap {

@@ -285,16 +285,16 @@ $village_regulations = [
 		</div>
 	</section>
 
-	<nav class="village-government__jump-nav" aria-label="Bagian halaman pemerintahan">
+	<nav class="village-government__jump-nav" aria-label="Bagian halaman pemerintahan" data-government-tabs>
 		<div class="village-government__inner">
-			<a class="is-active" href="#pemerintah-desa">Pemerintah Desa</a>
-			<a href="#struktur-organisasi">Struktur Organisasi</a>
-			<a href="#anggaran-desa">Anggaran Desa</a>
-			<a href="#peraturan-desa">Peraturan dan Regulasi Desa</a>
+			<a class="is-active" href="#pemerintah-desa" data-government-tab role="tab" aria-selected="true" aria-controls="pemerintah-desa">Pemerintah Desa</a>
+			<a href="#struktur-organisasi" data-government-tab role="tab" aria-selected="false" aria-controls="struktur-organisasi">Struktur Organisasi</a>
+			<a href="#anggaran-desa" data-government-tab role="tab" aria-selected="false" aria-controls="anggaran-desa">Anggaran Desa</a>
+			<a href="#peraturan-desa" data-government-tab role="tab" aria-selected="false" aria-controls="peraturan-desa">Peraturan dan Regulasi Desa</a>
 		</div>
 	</nav>
 
-	<section id="pemerintah-desa" class="village-government__section village-government__apparatus" data-government-section>
+	<section id="pemerintah-desa" class="village-government__section village-government__apparatus" data-government-section role="tabpanel">
 		<div class="village-government__inner village-government__content-layout village-government__content-layout--full">
 			<div class="village-government__people-content">
 				<section class="village-government__leadership" aria-labelledby="leadership-title">
@@ -366,7 +366,7 @@ $village_regulations = [
 		</div>
 	</section>
 
-	<section id="struktur-organisasi" class="village-government__section village-government__organization" data-government-section>
+	<section id="struktur-organisasi" class="village-government__section village-government__organization" data-government-section role="tabpanel" hidden>
 		<div class="village-government__inner">
 			<header class="village-government__section-heading village-government__section-heading--row">
 				<div>
@@ -403,7 +403,7 @@ $village_regulations = [
 		</div>
 	</section>
 
-	<section id="anggaran-desa" class="village-government__section village-government__budget" data-government-section>
+	<section id="anggaran-desa" class="village-government__section village-government__budget" data-government-section role="tabpanel" hidden>
 		<div class="village-government__inner">
 			<header class="village-government__section-heading village-government__section-heading--row">
 				<div>
@@ -489,7 +489,7 @@ $village_regulations = [
 		</div>
 	</section>
 
-	<section id="peraturan-desa" class="village-government__section village-government__regulations" data-government-section>
+	<section id="peraturan-desa" class="village-government__section village-government__regulations" data-government-section role="tabpanel" hidden>
 		<div class="village-government__inner">
 			<header class="village-government__section-heading">
 				<p class="village-government__kicker">Arsip Hukum Desa</p>

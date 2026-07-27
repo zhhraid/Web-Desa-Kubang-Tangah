@@ -181,9 +181,47 @@
 		return Number(value || 0).toLocaleString('id-ID');
 	};
 
+	const getNearestDistrict = function (latlng, districts) {
+		if (!latlng || !districts.length) {
+			return null;
+		}
+
+		return districts.reduce(function (nearest, district) {
+			if (!Array.isArray(district.center) || district.center.length < 2) {
+				return nearest;
+			}
+
+			const distance = latlng.distanceTo(window.L.latLng(district.center[0], district.center[1]));
+			if (!nearest || distance < nearest.distance) {
+				return {
+					district: district,
+					distance: distance
+				};
+			}
+
+			return nearest;
+		}, null);
+	};
+
+	const buildBoundaryTooltip = function (district) {
+		if (!district) {
+			return '<div class="village-map-tooltip village-map-tooltip--boundary">' +
+				'<strong>Wilayah Desa Kubang Tangah</strong>' +
+				'<span>Arahkan kursor pada area dusun</span>' +
+				'</div>';
+		}
+
+		return '<div class="village-map-tooltip village-map-tooltip--boundary">' +
+			'<strong>Dusun ' + district.name + '</strong>' +
+			'<span>Total ' + formatNumber(district.total) + ' jiwa</span>' +
+			'<dl><div><dt>Pria</dt><dd>' + formatNumber(district.male) + '</dd></div>' +
+			'<div><dt>Wanita</dt><dd>' + formatNumber(district.female) + '</dd></div></dl>' +
+			'</div>';
+	};
+
 	const buildDistrictTooltip = function (district) {
 		return '<div class="village-map-tooltip">' +
-			'<strong>' + district.name + '</strong>' +
+			'<strong>Dusun ' + district.name + '</strong>' +
 			'<span>Total ' + formatNumber(district.total) + ' jiwa</span>' +
 			'<dl><div><dt>Pria</dt><dd>' + formatNumber(district.male) + '</dd></div>' +
 			'<div><dt>Wanita</dt><dd>' + formatNumber(district.female) + '</dd></div></dl>' +
@@ -220,9 +258,9 @@
 		});
 
 		const baseLayers = {
-			standard: window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-				attribution: '&copy; OpenStreetMap contributors',
-				maxZoom: 19
+			standard: window.L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+				attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+				maxZoom: 20
 			}),
 			satellite: window.L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 				attribution: 'Tiles &copy; Esri',
@@ -270,18 +308,31 @@
 			.then(function (results) {
 				const geojson = results[0];
 				const mapData = results[1];
+				const districts = mapData.districts || [];
 				const districtLayer = window.L.layerGroup().addTo(map);
 				const facilityLayer = window.L.layerGroup().addTo(map);
 
 				const boundaryLayer = window.L.geoJSON(geojson, {
 					style: featureStyle,
 					onEachFeature: function (feature, layer) {
-						const label = feature.properties && feature.properties.name ? feature.properties.name : 'Batas wilayah';
-						layer.bindTooltip(label, { sticky: true, className: 'village-map-line-tooltip' });
+						const updateBoundaryLabel = function (event) {
+							const nearest = getNearestDistrict(event.latlng, districts);
+							layer.setTooltipContent(buildBoundaryTooltip(nearest ? nearest.district : null));
+						};
 
-						layer.on('mouseover', function () {
+						layer.bindTooltip(buildBoundaryTooltip(null), { sticky: true, className: 'village-map-line-tooltip' });
+
+						layer.on('mousemove', updateBoundaryLabel);
+
+						layer.on('mouseover', function (event) {
 							const style = featureStyle(feature);
-							layer.setStyle({ weight: style.weight + 1.8, fillOpacity: style.fillOpacity ? 0.27 : undefined });
+							const hoverStyle = { weight: style.weight + 1.8 };
+							if (style.fillOpacity) {
+								hoverStyle.fillOpacity = 0.27;
+							}
+
+							updateBoundaryLabel(event);
+							layer.setStyle(hoverStyle);
 						});
 
 						layer.on('mouseout', function () {
@@ -290,7 +341,7 @@
 					}
 				}).addTo(map);
 
-				(mapData.districts || []).forEach(function (district) {
+				districts.forEach(function (district) {
 					const districtCircle = window.L.circle(district.center, {
 						className: 'village-map-district-zone',
 						color: '#ffffff',
@@ -325,14 +376,6 @@
 						});
 					});
 
-					window.L.marker(district.center, {
-						icon: window.L.divIcon({
-							className: 'village-map-district-label',
-							html: '<strong>' + district.name + '</strong><span>' + formatNumber(district.total) + ' jiwa</span>',
-							iconAnchor: [58, 18]
-						}),
-						interactive: false
-					}).addTo(districtLayer);
 				});
 
 				(mapData.facilities || []).forEach(function (facility) {
@@ -363,8 +406,7 @@
 						radius: 8,
 						weight: 3
 					})
-						.addTo(map)
-						.bindTooltip('Desa Kubang Tangah', { direction: 'top', permanent: true, offset: [0, -8] });
+						.addTo(map);
 				}
 
 				mapElement.setAttribute('aria-busy', 'false');

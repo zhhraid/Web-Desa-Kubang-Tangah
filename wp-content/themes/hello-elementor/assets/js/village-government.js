@@ -7,8 +7,19 @@
 		return;
 	}
 
+	document.body.classList.add("village-government-page");
+
 	const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 	const numberFormatter = new Intl.NumberFormat("id-ID");
+
+	function setupHeaderVisibility() {
+		function update() {
+			document.body.classList.toggle("village-government-header-hidden", window.scrollY > 80);
+		}
+
+		update();
+		window.addEventListener("scroll", update, { passive: true });
+	}
 
 	function setupRevealAnimations() {
 		const sections = Array.from(page.querySelectorAll("[data-government-section]"));
@@ -19,7 +30,7 @@
 		}
 
 		sections.forEach((section) => {
-			if (section.getBoundingClientRect().top < window.innerHeight * 1.08) {
+			if (!section.hidden && section.getBoundingClientRect().top < window.innerHeight * 1.08) {
 				section.classList.add("is-visible");
 			}
 		});
@@ -100,43 +111,58 @@
 	}
 
 	function setupJumpNavigation() {
-		const links = Array.from(page.querySelectorAll(".village-government__jump-nav a[href^='#']"));
-		const sectionPairs = links
-			.map((link) => {
-				const target = document.querySelector(link.getAttribute("href"));
-				return target ? { link, target } : null;
-			})
-			.filter(Boolean);
+		const links = Array.from(page.querySelectorAll("[data-government-tab][href^='#']"));
+		const sections = Array.from(page.querySelectorAll("[data-government-section]"));
+		const sectionIds = sections.map((section) => section.id).filter(Boolean);
+		const tabs = page.querySelector("[data-government-tabs]");
 
-		links.forEach((link) => {
-			link.addEventListener("click", () => {
-				links.forEach((item) => item.classList.toggle("is-active", item === link));
-			});
-		});
-
-		if (!("IntersectionObserver" in window)) {
+		if (!links.length || !sections.length) {
 			return;
 		}
 
-		const observer = new IntersectionObserver(
-			(entries) => {
-				const visible = entries
-					.filter((entry) => entry.isIntersecting)
-					.sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+		function activate(targetId, options = {}) {
+			const target = sections.find((section) => section.id === targetId) || sections[0];
 
-				if (!visible) {
-					return;
+			sections.forEach((section) => {
+				const isActive = section === target;
+				section.hidden = !isActive;
+				section.classList.toggle("is-active", isActive);
+				if (isActive) {
+					section.classList.add("is-visible");
 				}
+			});
 
-				const activePair = sectionPairs.find((pair) => pair.target === visible.target);
-				if (activePair) {
-					links.forEach((link) => link.classList.toggle("is-active", link === activePair.link));
+			links.forEach((link) => {
+				const isActive = link.getAttribute("href") === `#${target.id}`;
+				link.classList.toggle("is-active", isActive);
+				link.setAttribute("aria-selected", String(isActive));
+			});
+
+			if (options.scroll && tabs) {
+				tabs.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+			}
+
+			if (options.hash) {
+				window.history.replaceState(null, "", `#${target.id}`);
+			}
+
+			window.setTimeout(() => {
+				window.dispatchEvent(new Event("resize"));
+			}, 80);
+		}
+
+		links.forEach((link) => {
+			link.addEventListener("click", (event) => {
+				event.preventDefault();
+				const targetId = link.getAttribute("href").replace("#", "");
+				if (targetId) {
+					activate(targetId, { hash: true, scroll: true });
 				}
-			},
-			{ rootMargin: "-20% 0px -65%", threshold: [0, 0.1, 0.3] }
-		);
+			});
+		});
 
-		sectionPairs.forEach((pair) => observer.observe(pair.target));
+		const initialId = sectionIds.includes(window.location.hash.replace("#", "")) ? window.location.hash.replace("#", "") : sectionIds[0];
+		activate(initialId);
 	}
 
 	function setupOrganizationCarousel() {
@@ -283,9 +309,10 @@
 		});
 	}
 
+	setupHeaderVisibility();
+	setupJumpNavigation();
 	setupRevealAnimations();
 	setupCounters();
-	setupJumpNavigation();
 	setupOrganizationCarousel();
 	setupRegulationFilters();
 	setupBudgetFilters();

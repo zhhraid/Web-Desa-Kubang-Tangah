@@ -13,11 +13,11 @@ $logo_url  = content_url( 'uploads/2026/01/logokt-100x100.png' );
 $whatsapp_url = function_exists( 'hello_elementor_village_whatsapp_url' ) ? hello_elementor_village_whatsapp_url() : 'https://api.whatsapp.com/send?phone=6285271664112';
 $menu_items = [
 	[ 'label' => 'Beranda', 'path' => '/', 'current' => is_front_page() ],
-	[ 'label' => 'Profil', 'path' => '/profil_desa/', 'current' => is_page( 'profil_desa' ) ],
-	[ 'label' => 'Pemerintahan', 'path' => '/pemerintahan_desa/', 'current' => is_page( 'pemerintahan_desa' ) ],
+	[ 'label' => 'Profil', 'url' => hello_elementor_village_page_url( 'profil-desa' ), 'current' => is_page( 'profil_desa' ) ],
+	[ 'label' => 'Pemerintahan', 'url' => hello_elementor_village_page_url( 'pemerintahan-desa' ), 'current' => is_page( 'pemerintahan_desa' ) ],
 	[ 'label' => 'Berita', 'path' => '/berita/', 'current' => is_page( 'berita' ) || is_singular( 'post' ) ],
-	[ 'label' => 'Statistik Desa', 'path' => '/data-infografis/', 'current' => is_page( 'data-infografis' ) ],
-	[ 'label' => 'Informasi', 'path' => '/data/', 'current' => is_page( 'data' ) ],
+	[ 'label' => 'Statistik Desa', 'url' => hello_elementor_village_page_url( 'statistik-desa' ), 'current' => is_page( 'data-infografis' ) ],
+	[ 'label' => 'Informasi', 'url' => hello_elementor_village_page_url( 'informasi-desa' ), 'current' => is_page( 'data' ) ],
 	[ 'label' => 'Galeri', 'path' => '/galeri/', 'current' => is_page( 'galeri' ) ],
 	[ 'label' => 'Kontak', 'url' => $whatsapp_url, 'current' => false, 'cta' => true, 'target' => '_blank', 'rel' => 'noopener noreferrer', 'aria_label' => 'Kontak WhatsApp Pak Rice' ],
 ];

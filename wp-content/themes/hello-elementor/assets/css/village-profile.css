@@ -245,39 +245,61 @@ body.village-profile-page.village-profile-header-hidden .site-header.village-hea
 .village-profile__section-nav {
 	-webkit-backdrop-filter: blur(20px) saturate(1.18);
 	backdrop-filter: blur(18px) saturate(1.18);
-	background: linear-gradient(135deg, rgba(251, 252, 250, 0.94), rgba(235, 247, 240, 0.84));
-	border-bottom: 1px solid var(--profile-line);
-	box-shadow: 0 16px 36px rgba(14, 62, 40, 0.08);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(229, 241, 234, 0.66));
+	border: 1px solid rgba(190, 214, 198, 0.82);
+	border-radius: 999px;
+	box-shadow: 0 18px 44px rgba(17, 60, 40, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.86);
+	margin: -38px auto 0;
+	max-width: min(980px, calc(100% - 40px));
 	position: sticky;
-	top: 0;
+	top: 10px;
 	z-index: 48;
 }
 
 .village-profile__section-nav > div {
-	display: grid;
-	grid-template-columns: repeat(4, minmax(150px, 1fr));
+	display: flex;
+	gap: 4px;
+	justify-content: center;
 	margin: 0 auto;
 	max-width: 980px;
-	padding: 12px 24px;
+	overflow-x: auto;
+	padding: 5px;
+	scrollbar-width: none;
+	width: 100%;
+}
+
+.village-profile__section-nav > div::-webkit-scrollbar {
+	display: none;
 }
 
 .village-profile__section-nav a {
-	border-bottom: 3px solid transparent;
+	border: 0;
+	border-radius: 999px;
 	color: var(--profile-ink-soft);
+	flex: 0 0 auto;
 	font-size: 14px;
 	font-weight: 750;
-	padding: 17px 12px 14px;
+	min-height: 44px;
+	padding: 12px 20px;
 	text-align: center;
 	text-decoration: none;
-	transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+	transition: background 180ms ease, box-shadow 180ms ease, color 180ms ease, transform 180ms ease;
+	white-space: nowrap;
 }
 
 .village-profile__section-nav a:hover,
-.village-profile__section-nav a:focus-visible,
-.village-profile__section-nav a.is-active {
-	background: var(--profile-mist);
-	border-bottom-color: var(--profile-green);
+.village-profile__section-nav a:focus-visible {
+	background: rgba(255, 255, 255, 0.78);
 	color: var(--profile-green);
+	outline: none;
+	transform: translateY(-1px);
+}
+
+.village-profile__section-nav a.is-active {
+	background: linear-gradient(135deg, var(--profile-green), #34a164);
+	box-shadow: 0 10px 20px rgba(31, 112, 70, 0.22);
+	color: #ffffff;
+	transform: translateY(-1px);
 }
 
 .village-profile__section {
@@ -1530,9 +1552,8 @@ body.village-profile-page.village-profile-header-hidden .site-header.village-hea
 	}
 
 	.village-profile__section-nav > div {
-		grid-template-columns: repeat(4, minmax(150px, 1fr));
-		min-width: 660px;
-		padding-inline: 18px;
+		justify-content: flex-start;
+		min-width: max-content;
 	}
 
 	.village-profile__history,

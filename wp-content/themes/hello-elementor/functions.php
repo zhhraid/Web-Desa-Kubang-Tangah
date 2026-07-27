@@ -23,6 +23,151 @@ define( 'HELLO_THEME_STYLE_URL', HELLO_THEME_ASSETS_URL . 'css/' );
 define( 'HELLO_THEME_IMAGES_PATH', HELLO_THEME_ASSETS_PATH . 'images/' );
 define( 'HELLO_THEME_IMAGES_URL', HELLO_THEME_ASSETS_URL . 'images/' );
 
+/**
+ * Public-facing village URLs. The old page slugs remain as internal template
+ * targets so the existing WordPress pages do not need to be renamed in the DB.
+ *
+ * @return array<string,string>
+ */
+function hello_elementor_village_page_aliases() {
+	return [
+		'profil-desa'        => 'profil_desa',
+		'pemerintahan-desa'  => 'pemerintahan_desa',
+		'statistik-desa'     => 'data-infografis',
+		'informasi-desa'     => 'data',
+	];
+}
+
+/**
+ * Build public URL for custom village pages.
+ *
+ * @param string $alias Public alias without leading slash.
+ * @return string
+ */
+function hello_elementor_village_page_url( $alias ) {
+	return home_url( '/' . trim( $alias, '/' ) . '/' );
+}
+
+/**
+ * Convert internal village page slugs to their public aliases.
+ *
+ * @param string $internal_slug Existing WordPress page slug.
+ * @return string|null
+ */
+function hello_elementor_village_alias_for_internal_slug( $internal_slug ) {
+	$aliases = array_flip( hello_elementor_village_page_aliases() );
+
+	return $aliases[ $internal_slug ] ?? null;
+}
+
+/**
+ * Make WordPress-generated permalinks use the public aliases too.
+ *
+ * @param string $link    Generated page link.
+ * @param int    $post_id Page ID.
+ * @return string
+ */
+function hello_elementor_village_alias_page_link( $link, $post_id ) {
+	$post = get_post( $post_id );
+
+	if ( ! $post instanceof WP_Post ) {
+		return $link;
+	}
+
+	$alias = hello_elementor_village_alias_for_internal_slug( $post->post_name );
+
+	return $alias ? hello_elementor_village_page_url( $alias ) : $link;
+}
+add_filter( 'page_link', 'hello_elementor_village_alias_page_link', 10, 2 );
+
+/**
+ * Return request path relative to the WordPress home path.
+ *
+ * @param string|null $url Full URL or null for current request.
+ * @return string
+ */
+function hello_elementor_village_relative_request_path( $url = null ) {
+	$path      = null === $url ? (string) wp_unslash( $_SERVER['REQUEST_URI'] ?? '' ) : $url;
+	$path      = (string) wp_parse_url( $path, PHP_URL_PATH );
+	$home_path = (string) wp_parse_url( home_url( '/' ), PHP_URL_PATH );
+	$path      = trim( $path, '/' );
+	$home_path = trim( $home_path, '/' );
+
+	if ( '' !== $home_path && 0 === strpos( $path . '/', $home_path . '/' ) ) {
+		$path = trim( substr( $path, strlen( $home_path ) ), '/' );
+	}
+
+	return $path;
+}
+
+/**
+ * Map clean public aliases to existing WordPress page slugs.
+ *
+ * @param array<string,mixed> $query_vars Parsed query variables.
+ * @return array<string,mixed>
+ */
+function hello_elementor_village_alias_request( $query_vars ) {
+	$aliases = hello_elementor_village_page_aliases();
+	$path    = hello_elementor_village_relative_request_path();
+
+	if ( isset( $aliases[ $path ] ) ) {
+		$query_vars = [
+			'pagename' => $aliases[ $path ],
+		];
+	}
+
+	return $query_vars;
+}
+add_filter( 'request', 'hello_elementor_village_alias_request' );
+
+/**
+ * Prevent WordPress from canonicalizing pretty aliases back to old DB slugs.
+ *
+ * @param string|false $redirect_url Requested canonical redirect URL.
+ * @param string       $requested_url Original requested URL.
+ * @return string|false
+ */
+function hello_elementor_village_keep_alias_urls( $redirect_url, $requested_url ) {
+	$aliases = hello_elementor_village_page_aliases();
+	$path    = hello_elementor_village_relative_request_path( $requested_url );
+
+	if ( isset( $aliases[ $path ] ) ) {
+		return false;
+	}
+
+	return $redirect_url;
+}
+add_filter( 'redirect_canonical', 'hello_elementor_village_keep_alias_urls', 10, 2 );
+
+/**
+ * Redirect old internal page slugs to the public aliases.
+ *
+ * @return void
+ */
+function hello_elementor_village_redirect_old_page_slugs() {
+	if ( is_admin() || wp_doing_ajax() ) {
+		return;
+	}
+
+	$path         = hello_elementor_village_relative_request_path();
+	$alias_by_old = array_flip( hello_elementor_village_page_aliases() );
+
+	if ( ! isset( $alias_by_old[ $path ] ) ) {
+		return;
+	}
+
+	$target = hello_elementor_village_page_url( $alias_by_old[ $path ] );
+	$query  = (string) wp_unslash( $_SERVER['QUERY_STRING'] ?? '' );
+
+	if ( '' !== $query ) {
+		$target .= '?' . $query;
+	}
+
+	wp_safe_redirect( $target, 301 );
+	exit;
+}
+add_action( 'template_redirect', 'hello_elementor_village_redirect_old_page_slugs', 1 );
+
 if ( ! isset( $content_width ) ) {
 	$content_width = 800; // Pixels.
 }
@@ -370,7 +515,7 @@ add_filter( 'body_class', 'hello_elementor_village_body_classes' );
  * runtime is unnecessary and can otherwise emit a missing configuration error.
  */
 function hello_elementor_village_profile_dequeue_unused_scripts() {
-	if ( ! is_page( [ 'profil_desa', 'pemerintahan_desa', 'berita', 'galeri', 'data' ] ) && ! is_singular( 'post' ) ) {
+	if ( ! is_page( [ 'profil_desa', 'pemerintahan_desa', 'data-infografis', 'berita', 'galeri', 'data' ] ) && ! is_singular( 'post' ) ) {
 		return;
 	}
 

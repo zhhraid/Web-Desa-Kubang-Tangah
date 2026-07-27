@@ -10,6 +10,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
+$stats_data_path = get_template_directory() . '/assets/data/village-infographics.json';
+$stats_data      = file_exists( $stats_data_path ) ? json_decode( (string) file_get_contents( $stats_data_path ), true ) : [];
+$stats_meta      = is_array( $stats_data ) ? (array) ( $stats_data['meta'] ?? [] ) : [];
+$home_population = (int) ( $stats_meta['population'] ?? 1477 );
+$home_families   = (int) ( $stats_meta['families'] ?? 490 );
+$home_dusun      = count( (array) ( $stats_meta['dusun'] ?? [] ) ) ?: 5;
+
 $asset_base = content_url( 'uploads/' );
 $hero_image = $asset_base . '2026/01/pemandangan-scaled.jpg';
 $team_image = $asset_base . '2026/01/fotobersama-e1768798550506.jpg';
@@ -73,7 +80,7 @@ $latest_posts = get_posts(
 					Website ini menjadi ruang informasi publik, layanan, dan kabar kegiatan masyarakat.
 				</p>
 				<div class="village-home__hero-actions">
-					<a href="<?php echo esc_url( home_url( '/profil_desa/' ) ); ?>">Profil Desa</a>
+					<a href="<?php echo esc_url( hello_elementor_village_page_url( 'profil-desa' ) ); ?>">Profil Desa</a>
 				</div>
 			</div>
 
@@ -87,21 +94,21 @@ $latest_posts = get_posts(
 						<span class="village-home__stat-icon" aria-hidden="true">
 							<svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3Zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3Zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13Zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5Z"/></svg>
 						</span>
-						<strong><span class="village-home__stat-number" data-count="1480">0</span></strong>
+						<strong><span class="village-home__stat-number" data-count="<?php echo esc_attr( $home_population ); ?>">0</span></strong>
 						<span>Jumlah Penduduk</span>
 					</div>
 					<div class="village-home__stat-card">
 						<span class="village-home__stat-icon" aria-hidden="true">
 							<svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
 						</span>
-						<strong><span class="village-home__stat-number" data-count="496">0</span></strong>
+						<strong><span class="village-home__stat-number" data-count="<?php echo esc_attr( $home_families ); ?>">0</span></strong>
 						<span>Jumlah Keluarga</span>
 					</div>
 					<div class="village-home__stat-card">
 						<span class="village-home__stat-icon" aria-hidden="true">
 							<svg viewBox="0 0 24 24"><path d="M4 11V5l5-2 6 2 5-2v14l-5 2-6-2-5 2V11Zm2-4.65v9.7l2-.8V5.55l-2 .8Zm4-.68v9.7l4 1.34v-9.7l-4-1.34Zm6 1.28v9.7l2-.8v-9.7l-2 .8Z"/></svg>
 						</span>
-						<strong><span class="village-home__stat-number" data-count="5">0</span></strong>
+						<strong><span class="village-home__stat-number" data-count="<?php echo esc_attr( $home_dusun ); ?>">0</span></strong>
 						<span>Banyak Dusun</span>
 					</div>
 					<div class="village-home__stat-card">
@@ -112,7 +119,7 @@ $latest_posts = get_posts(
 						<span>Luas Wilayah</span>
 					</div>
 				</div>
-				<a class="village-home__stats-link" href="<?php echo esc_url( home_url( '/data-infografis/' ) ); ?>">Lihat Selengkapnya</a>
+				<a class="village-home__stats-link" href="<?php echo esc_url( hello_elementor_village_page_url( 'statistik-desa' ) ); ?>">Lihat Selengkapnya</a>
 			</aside>
 		</div>
 	</section>
@@ -203,7 +210,7 @@ $latest_posts = get_posts(
 				Pantau halaman informasi untuk pembaruan layanan administrasi, kegiatan dusun, serta pengumuman resmi dari Pemerintah Desa Kubang Tangah.
 			</p>
 		</div>
-		<a href="<?php echo esc_url( home_url( '/data/' ) ); ?>">Buka Informasi Desa</a>
+		<a href="<?php echo esc_url( hello_elementor_village_page_url( 'informasi-desa' ) ); ?>">Buka Informasi Desa</a>
 	</section>
 </main>
 
