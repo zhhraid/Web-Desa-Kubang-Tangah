@@ -794,3 +794,867 @@ body .site-main.village-infographics-page {
 		transition: none;
 	}
 }
+
+.village-infographics-page__controls[hidden],
+.village-infographics-page__panel[hidden] {
+	display: none !important;
+}
+
+.village-infographics-page__intro {
+	background:
+		radial-gradient(circle at 10% 18%, rgba(57, 140, 91, 0.12), transparent 28%),
+		radial-gradient(circle at 84% 28%, rgba(47, 143, 139, 0.11), transparent 30%),
+		linear-gradient(135deg, #f7fbf8 0%, #eef7f1 48%, #f9fbf7 100%);
+	position: relative;
+}
+
+.village-infographics-page__intro::before {
+	background:
+		linear-gradient(90deg, rgba(31, 112, 70, 0.09) 1px, transparent 1px),
+		linear-gradient(0deg, rgba(31, 112, 70, 0.08) 1px, transparent 1px);
+	background-size: 38px 38px;
+	content: "";
+	inset: 0;
+	opacity: 0.18;
+	pointer-events: none;
+	position: absolute;
+}
+
+.village-infographics-page__intro > * {
+	position: relative;
+	z-index: 1;
+}
+
+.village-infographics-page__lead h1,
+.village-infographics-page__intro h1 {
+	font-size: clamp(48px, 5.4vw, 92px);
+	max-width: 560px;
+}
+
+.village-infographics-page__view-tabs {
+	-webkit-backdrop-filter: blur(18px) saturate(1.18);
+	backdrop-filter: blur(18px) saturate(1.18);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(226, 239, 229, 0.66));
+	border: 1px solid rgba(194, 216, 201, 0.82);
+	border-radius: 999px;
+	box-shadow: 0 16px 34px rgba(18, 64, 38, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+	display: inline-flex;
+	gap: 4px;
+	margin-top: 24px;
+	padding: 5px;
+}
+
+.village-infographics-page__view-tabs button {
+	background: transparent;
+	border: 0;
+	border-radius: 999px;
+	color: #40584a;
+	cursor: pointer;
+	font: inherit;
+	font-size: 13px;
+	font-weight: 800;
+	min-height: 42px;
+	padding: 10px 20px;
+	transition: background 180ms ease, color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.village-infographics-page__view-tabs button:hover,
+.village-infographics-page__view-tabs button:focus-visible {
+	background: rgba(255, 255, 255, 0.75);
+	color: #17633d;
+	outline: none;
+}
+
+.village-infographics-page__view-tabs button.is-active {
+	background: linear-gradient(135deg, #1e7749, #2f9a64);
+	box-shadow: 0 10px 20px rgba(31, 112, 70, 0.22);
+	color: #ffffff;
+}
+
+.village-infographics-page__sources {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 20px;
+	max-width: 640px;
+}
+
+.village-infographics-page__sources strong,
+.village-infographics-page__sources span {
+	-webkit-backdrop-filter: blur(12px);
+	backdrop-filter: blur(12px);
+	background: rgba(255, 255, 255, 0.74);
+	border: 1px solid rgba(193, 216, 199, 0.9);
+	border-radius: 999px;
+	color: #315f44;
+	font-size: 10px;
+	font-weight: 800;
+	line-height: 1.2;
+	padding: 8px 10px;
+}
+
+.village-infographics-page__sources strong {
+	background: rgba(31, 112, 70, 0.1);
+	color: #17633d;
+	text-transform: uppercase;
+}
+
+.village-infographics-page__product-spotlight {
+	-webkit-backdrop-filter: blur(22px) saturate(1.18);
+	backdrop-filter: blur(22px) saturate(1.18);
+	background:
+		linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(225, 241, 231, 0.76)),
+		radial-gradient(circle at 88% 0%, rgba(218, 165, 54, 0.16), transparent 28%);
+	border: 1px solid rgba(197, 218, 202, 0.9);
+	border-radius: 18px;
+	box-shadow: 0 24px 55px rgba(18, 62, 37, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+	display: grid;
+	gap: 20px;
+	grid-column: 1 / -1;
+	grid-template-columns: minmax(260px, 0.62fr) minmax(380px, 1fr);
+	margin-top: 6px;
+	overflow: hidden;
+	padding: 24px;
+	position: relative;
+}
+
+.village-infographics-page__product-spotlight::after {
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+	content: "";
+	height: 180%;
+	left: -40%;
+	position: absolute;
+	top: -40%;
+	transform: rotate(16deg);
+	width: 24%;
+	animation: village-gloss-sweep 7s ease-in-out infinite;
+}
+
+.village-infographics-page__product-spotlight > * {
+	position: relative;
+	z-index: 1;
+}
+
+.village-infographics-page__product-spotlight p {
+	color: #5c7165;
+	font-size: 13px;
+	line-height: 1.7;
+	margin: 0;
+}
+
+.village-infographics-page__product-spotlight > div:first-child > p:first-child {
+	color: #27734a;
+	font-size: 11px;
+	font-weight: 800;
+	letter-spacing: 0;
+	margin: 0 0 6px;
+	text-transform: uppercase;
+}
+
+.village-infographics-page__product-spotlight h2 {
+	color: #123f29;
+	font-size: clamp(25px, 3vw, 42px);
+	letter-spacing: 0;
+	line-height: 1.1;
+	margin: 0 0 10px;
+}
+
+.village-infographics-page__product-cards {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.village-infographics-page__product-cards > div {
+	background: rgba(255, 255, 255, 0.82);
+	border: 1px solid rgba(203, 224, 209, 0.95);
+	border-radius: 12px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.92);
+	min-width: 0;
+	padding: 16px 12px;
+}
+
+.village-infographics-page__product-cards small,
+.village-infographics-page__product-cards span {
+	color: #61736a;
+	display: block;
+	font-size: 10px;
+	font-weight: 800;
+	line-height: 1.35;
+}
+
+.village-infographics-page__product-cards strong {
+	color: #17633d;
+	display: block;
+	font-size: 23px;
+	line-height: 1.1;
+	margin: 9px 0 5px;
+	overflow-wrap: anywhere;
+}
+
+.village-infographics-page__product-strip {
+	display: grid;
+	gap: 8px;
+	grid-column: 1 / -1;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.village-infographics-page__product-strip > div {
+	background: rgba(255, 255, 255, 0.64);
+	border: 1px solid rgba(204, 224, 209, 0.8);
+	border-radius: 12px;
+	padding: 12px;
+}
+
+.village-infographics-page__product-strip span,
+.village-infographics-page__product-strip strong {
+	color: #345b43;
+	display: block;
+	font-size: 10px;
+	font-weight: 800;
+	line-height: 1.35;
+}
+
+.village-infographics-page__product-strip i {
+	background: #d9eadf;
+	border-radius: 999px;
+	display: block;
+	height: 8px;
+	margin: 9px 0 8px;
+	overflow: hidden;
+	position: relative;
+}
+
+.village-infographics-page__product-strip i::before {
+	background: linear-gradient(90deg, #1d7648, #44a86c);
+	border-radius: inherit;
+	content: "";
+	inset: 0 auto 0 0;
+	position: absolute;
+	width: var(--bar-size);
+}
+
+.village-infographics-page__sections {
+	align-items: start;
+}
+
+.village-infographics-page__section[data-section="sebaranPenduduk"],
+.village-infographics-page__section[data-section="umurPiramida"],
+.village-infographics-page__section[data-section="pendidikan"],
+.village-infographics-page__section[data-section="pekerjaan"],
+.village-infographics-page__section[data-section="bantuan"],
+.village-infographics-page__section[data-section="produkUnggulan"] {
+	grid-column: 1 / -1;
+}
+
+.village-infographics-page__section {
+	-webkit-backdrop-filter: blur(16px);
+	backdrop-filter: blur(16px);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(250, 253, 251, 0.84));
+	border-color: rgba(202, 222, 207, 0.9);
+	border-radius: 16px;
+	box-shadow: 0 18px 42px rgba(18, 62, 37, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.98);
+}
+
+.village-home__pie-layout {
+	align-items: center;
+	display: grid;
+	gap: 28px;
+	grid-template-columns: minmax(210px, 0.78fr) minmax(240px, 1fr);
+	min-height: 280px;
+}
+
+.village-home__pie {
+	aspect-ratio: 1;
+	background: var(--chart-gradient);
+	border-radius: 50%;
+	box-shadow: 0 18px 34px rgba(22, 68, 42, 0.13), inset 0 0 0 14px rgba(255, 255, 255, 0.9);
+	display: grid;
+	margin: 0 auto;
+	max-width: 260px;
+	place-items: center;
+	width: min(100%, 260px);
+}
+
+.village-home__pie-center {
+	align-items: center;
+	background: rgba(255, 255, 255, 0.94);
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	height: 45%;
+	justify-content: center;
+	width: 45%;
+}
+
+.village-home__pie-center strong {
+	color: #123f29;
+	font-size: 25px;
+	line-height: 1;
+}
+
+.village-home__pie-center span {
+	color: #647469;
+	font-size: 10px;
+	font-weight: 800;
+	margin-top: 5px;
+}
+
+.village-home__pie-details {
+	display: grid;
+	gap: 10px;
+}
+
+.village-home__pie-detail {
+	align-items: center;
+	background: #f4f9f6;
+	border: 1px solid #d7e7dc;
+	border-radius: 12px;
+	display: grid;
+	gap: 10px;
+	grid-template-columns: 12px minmax(0, 1fr) auto auto;
+	padding: 12px;
+}
+
+.village-home__pie-detail i {
+	border-radius: 50%;
+	height: 10px;
+	width: 10px;
+}
+
+.village-home__pie-detail span {
+	color: #395d48;
+	font-size: 12px;
+	font-weight: 800;
+}
+
+.village-home__pie-detail strong {
+	color: #123f29;
+	font-size: 15px;
+}
+
+.village-home__pie-detail small {
+	color: #6d7d72;
+	font-size: 11px;
+	font-weight: 800;
+}
+
+.village-home__pyramid-chart {
+	display: grid;
+	gap: 6px;
+	min-height: 430px;
+	padding: 4px 0;
+}
+
+.village-home__pyramid-head,
+.village-home__pyramid-row {
+	align-items: center;
+	display: grid;
+	gap: 10px;
+	grid-template-columns: minmax(160px, 1fr) 64px minmax(160px, 1fr);
+}
+
+.village-home__pyramid-head span {
+	color: #4d6a59;
+	font-size: 11px;
+	font-weight: 800;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.village-home__pyramid-row strong {
+	color: #31493b;
+	font-size: 11px;
+	font-weight: 800;
+	text-align: center;
+}
+
+.village-home__pyramid-bar {
+	align-items: center;
+	border-radius: 999px;
+	display: flex;
+	height: 18px;
+	overflow: visible;
+	position: relative;
+}
+
+.village-home__pyramid-bar--female {
+	background: linear-gradient(90deg, #f25289, #ff8aac);
+	justify-content: flex-start;
+	margin-left: auto;
+	transform-origin: right;
+	width: var(--bar-size);
+}
+
+.village-home__pyramid-bar--male {
+	background: linear-gradient(90deg, #1d64c7, #1f8beb);
+	justify-content: flex-end;
+	transform-origin: left;
+	width: var(--bar-size);
+}
+
+.village-home__pyramid-bar b {
+	color: #ffffff;
+	font-size: 10px;
+	line-height: 1;
+	padding-inline: 8px;
+}
+
+.village-home__pyramid-note {
+	background: #eef8f2;
+	border: 1px solid #d1e7d8;
+	border-radius: 12px;
+	color: #365f48;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1.7;
+	margin: 14px 0 0;
+	padding: 12px 14px;
+}
+
+.village-home__creative-chart {
+	display: grid;
+	gap: 18px;
+	grid-template-columns: minmax(0, 1.4fr) minmax(240px, 0.6fr);
+	min-height: 320px;
+}
+
+.village-home__creative-bars {
+	display: grid;
+	gap: 12px;
+}
+
+.village-home__creative-item {
+	align-items: center;
+	display: grid;
+	gap: 12px;
+	grid-template-columns: 62px minmax(0, 1fr) minmax(120px, 0.36fr);
+}
+
+.village-home__creative-item > strong {
+	color: #17633d;
+	font-size: 18px;
+	text-align: right;
+}
+
+.village-home__creative-item > span {
+	color: #3f5949;
+	font-size: 12px;
+	font-weight: 800;
+	line-height: 1.35;
+}
+
+.village-home__creative-track {
+	background: #e6f0ea;
+	border-radius: 999px;
+	height: 20px;
+	overflow: hidden;
+}
+
+.village-home__creative-fill {
+	border-radius: inherit;
+	display: block;
+	height: 100%;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 900ms cubic-bezier(0.2, 0.8, 0.2, 1);
+	width: var(--bar-size);
+}
+
+.village-home__chart.is-visible .village-home__creative-fill {
+	transform: scaleX(1);
+}
+
+.village-home__creative-summary {
+	background: linear-gradient(145deg, #13703f, #0f4c31);
+	border-radius: 16px;
+	box-shadow: 0 18px 32px rgba(16, 87, 51, 0.2);
+	color: #ffffff;
+	padding: 22px;
+}
+
+.village-home__creative-summary span,
+.village-home__creative-summary p {
+	color: rgba(255, 255, 255, 0.78);
+	font-size: 12px;
+	line-height: 1.7;
+	margin: 0;
+}
+
+.village-home__creative-summary strong {
+	display: block;
+	font-size: 44px;
+	line-height: 1;
+	margin: 18px 0 12px;
+}
+
+.village-infographics-page__poster-grid {
+	display: grid;
+	gap: 22px;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	padding: 26px clamp(14px, 2vw, 34px) 42px;
+}
+
+.village-infographics-page__poster {
+	background:
+		linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(250, 253, 251, 0.82)),
+		radial-gradient(circle at 12% 16%, rgba(63, 160, 94, 0.14), transparent 30%);
+	border: 1px solid rgba(202, 222, 207, 0.9);
+	border-radius: 22px;
+	box-shadow: 0 20px 46px rgba(18, 62, 37, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.96);
+	min-width: 0;
+	overflow: hidden;
+	padding: 26px;
+	position: relative;
+}
+
+.village-infographics-page__poster::before {
+	background:
+		linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+		linear-gradient(0deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+	background-size: 26px 26px;
+	content: "";
+	inset: 0;
+	opacity: 0.24;
+	pointer-events: none;
+	position: absolute;
+}
+
+.village-infographics-page__poster > * {
+	position: relative;
+	z-index: 1;
+}
+
+.village-infographics-page__poster--age {
+	background-color: #c9f4f1;
+	grid-column: 1 / -1;
+}
+
+.village-infographics-page__poster--work {
+	background-color: #d8f1cf;
+}
+
+.village-infographics-page__poster--marriage {
+	background-color: #ffe0e2;
+}
+
+.village-infographics-page__poster--product {
+	background-color: #fff1a6;
+}
+
+.village-infographics-page__poster--facility {
+	background-color: #f2efff;
+}
+
+.village-infographics-page__poster header span {
+	background: rgba(31, 112, 70, 0.1);
+	border: 1px solid rgba(31, 112, 70, 0.18);
+	border-radius: 999px;
+	color: #17633d;
+	display: inline-flex;
+	font-size: 10px;
+	font-weight: 800;
+	padding: 7px 10px;
+	text-transform: uppercase;
+}
+
+.village-infographics-page__poster h2 {
+	color: #123f29;
+	font-size: clamp(24px, 3.4vw, 52px);
+	line-height: 1.08;
+	margin: 12px 0 22px;
+	max-width: 1080px;
+}
+
+.village-infographics-page__poster-pyramid {
+	background: rgba(255, 255, 255, 0.76);
+	border: 1px solid rgba(255, 255, 255, 0.85);
+	border-radius: 20px;
+	box-shadow: 0 14px 28px rgba(24, 72, 45, 0.1);
+	display: grid;
+	gap: 5px;
+	padding: 20px;
+}
+
+.village-infographics-page__poster-pyramid > div {
+	align-items: center;
+	display: grid;
+	gap: 10px;
+	grid-template-columns: minmax(120px, 1fr) 58px minmax(120px, 1fr);
+}
+
+.village-infographics-page__poster-pyramid strong {
+	color: #244634;
+	font-size: 12px;
+	text-align: center;
+}
+
+.village-infographics-page__poster-pyramid i {
+	align-items: center;
+	border-radius: 999px;
+	display: flex;
+	font-style: normal;
+	height: 22px;
+	min-width: 30px;
+	width: var(--bar-size);
+}
+
+.village-infographics-page__poster-pyramid i:first-child {
+	background: linear-gradient(90deg, #ff236a, #ff7aa0);
+	justify-content: flex-start;
+	margin-left: auto;
+}
+
+.village-infographics-page__poster-pyramid i:last-child {
+	background: linear-gradient(90deg, #0758d4, #1485ff);
+	justify-content: flex-end;
+}
+
+.village-infographics-page__poster-pyramid span {
+	color: #ffffff;
+	font-size: 11px;
+	font-weight: 800;
+	padding-inline: 8px;
+}
+
+.village-infographics-page__poster footer {
+	align-items: center;
+	display: grid;
+	gap: 12px;
+	grid-template-columns: repeat(2, minmax(150px, auto)) minmax(240px, 1fr);
+	margin-top: 18px;
+}
+
+.village-infographics-page__poster footer div,
+.village-infographics-page__poster footer p {
+	background: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(255, 255, 255, 0.9);
+	border-radius: 16px;
+	color: #365848;
+	line-height: 1.7;
+	margin: 0;
+	padding: 16px;
+}
+
+.village-infographics-page__poster footer strong {
+	color: #d82c39;
+	display: block;
+	font-size: 34px;
+	line-height: 1;
+}
+
+.village-infographics-page__poster footer span {
+	color: #355847;
+	font-size: 12px;
+	font-weight: 800;
+}
+
+.village-infographics-page__poster-split {
+	align-items: center;
+	display: grid;
+	gap: 22px;
+	grid-template-columns: minmax(180px, 0.7fr) minmax(220px, 1fr);
+}
+
+.village-infographics-page__poster-donut {
+	aspect-ratio: 1;
+	background: var(--poster-gradient);
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 28px rgba(255, 255, 255, 0.86), 0 16px 26px rgba(35, 70, 47, 0.16);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: 240px;
+	text-align: center;
+	width: 100%;
+}
+
+.village-infographics-page__poster-donut strong {
+	color: #123f29;
+	font-size: 32px;
+	line-height: 1;
+}
+
+.village-infographics-page__poster-donut span {
+	color: #52675a;
+	font-size: 11px;
+	font-weight: 800;
+	margin-top: 7px;
+}
+
+.village-infographics-page__poster-list,
+.village-infographics-page__poster-bars {
+	display: grid;
+	gap: 10px;
+}
+
+.village-infographics-page__poster-list p {
+	align-items: center;
+	background: rgba(255, 255, 255, 0.72);
+	border-radius: 12px;
+	color: #364f41;
+	display: grid;
+	font-size: 12px;
+	font-weight: 800;
+	gap: 10px;
+	grid-template-columns: 12px minmax(0, 1fr) auto;
+	margin: 0;
+	padding: 11px 12px;
+}
+
+.village-infographics-page__poster-list i {
+	border-radius: 50%;
+	height: 10px;
+	width: 10px;
+}
+
+.village-infographics-page__poster-list strong {
+	color: #123f29;
+}
+
+.village-infographics-page__poster-bars > div {
+	align-items: center;
+	display: grid;
+	gap: 10px;
+	grid-template-columns: minmax(105px, 0.46fr) minmax(0, 1fr) 42px;
+}
+
+.village-infographics-page__poster-bars span,
+.village-infographics-page__poster-bars strong {
+	color: #324f3f;
+	font-size: 12px;
+	font-weight: 800;
+}
+
+.village-infographics-page__poster-bars i {
+	background: rgba(255, 255, 255, 0.68);
+	border-radius: 999px;
+	height: 14px;
+	overflow: hidden;
+	position: relative;
+}
+
+.village-infographics-page__poster-bars i::before {
+	background: linear-gradient(90deg, #1d7448, #52af71);
+	border-radius: inherit;
+	content: "";
+	inset: 0 auto 0 0;
+	position: absolute;
+	width: var(--bar-size);
+}
+
+.village-infographics-page__poster-metrics {
+	display: grid;
+	gap: 12px;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	margin-bottom: 20px;
+}
+
+.village-infographics-page__poster-metrics div,
+.village-infographics-page__poster-assets div {
+	background: rgba(255, 255, 255, 0.72);
+	border: 1px solid rgba(255, 255, 255, 0.82);
+	border-radius: 16px;
+	box-shadow: 0 12px 24px rgba(31, 84, 48, 0.08);
+	padding: 18px;
+}
+
+.village-infographics-page__poster-metrics strong,
+.village-infographics-page__poster-assets strong {
+	color: #d73330;
+	display: block;
+	font-size: clamp(24px, 3vw, 42px);
+	line-height: 1;
+	margin-bottom: 8px;
+}
+
+.village-infographics-page__poster-metrics span,
+.village-infographics-page__poster-assets span {
+	color: #3f5549;
+	font-size: 12px;
+	font-weight: 800;
+	line-height: 1.45;
+}
+
+.village-infographics-page__poster-assets {
+	display: grid;
+	gap: 12px;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@keyframes village-gloss-sweep {
+	0%,
+	42% {
+		transform: translateX(0) rotate(16deg);
+	}
+	72%,
+	100% {
+		transform: translateX(560%) rotate(16deg);
+	}
+}
+
+@media (max-width: 1180px) {
+	.village-infographics-page__product-spotlight {
+		grid-template-columns: 1fr;
+	}
+
+	.village-infographics-page__product-cards {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.village-infographics-page__poster-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 760px) {
+	.village-infographics-page__lead h1,
+	.village-infographics-page__intro h1 {
+		font-size: 38px;
+	}
+
+	.village-infographics-page__product-cards,
+	.village-infographics-page__product-strip,
+	.village-infographics-page__poster-metrics,
+	.village-infographics-page__poster-assets {
+		grid-template-columns: 1fr;
+	}
+
+	.village-home__pie-layout,
+	.village-home__creative-chart,
+	.village-infographics-page__poster-split,
+	.village-infographics-page__poster footer {
+		grid-template-columns: 1fr;
+	}
+
+	.village-home__pyramid-chart,
+	.village-infographics-page__poster-pyramid {
+		overflow-x: auto;
+	}
+
+	.village-home__pyramid-head,
+	.village-home__pyramid-row,
+	.village-infographics-page__poster-pyramid > div {
+		min-width: 560px;
+	}
+
+	.village-home__creative-item {
+		grid-template-columns: 50px minmax(0, 1fr);
+	}
+
+	.village-home__creative-item > span {
+		grid-column: 2;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.village-infographics-page__product-spotlight::after {
+		animation: none;
+	}
+
+	.village-home__creative-fill {
+		transform: scaleX(1);
+		transition: none;
+	}
+}

@@ -1,75 +1,913 @@
 {
   "meta": {
+    "pageTitle": "Statistik Desa",
     "population": 1477,
     "families": 490,
-    "matchedFamilies": 485,
-    "dusun": ["Batu Tajam", "Luak Mani", "Polak Datar", "Sionsek", "Guguak Pauh"],
-    "source": "DESA CANTIK 8 Juli 2026"
+    "matchedFamilies": 488,
+    "areaKm2": 20.15,
+    "dusun": [
+      "Batu Tajam",
+      "Luak Mani",
+      "Polak Datar",
+      "Sionsek",
+      "Guguak Pauh"
+    ],
+    "source": "DESA CANTIK 8 Juli 2026 FIX",
+    "updated": "8 Juli 2026",
+    "sources": [
+      "Profil Desa Kubang Tangah",
+      "Disdukcapil",
+      "SIKS-NG Kemensos",
+      "Data Administrasi Kependudukan Desa Kubang Tangah Tahun 2026"
+    ]
+  },
+  "sebaranPenduduk": {
+    "categories": [
+      "Laki-laki",
+      "Perempuan"
+    ],
+    "total": [
+      754,
+      723
+    ],
+    "byDusun": {
+      "Batu Tajam": [
+        261,
+        242
+      ],
+      "Luak Mani": [
+        150,
+        143
+      ],
+      "Polak Datar": [
+        209,
+        204
+      ],
+      "Sionsek": [
+        57,
+        67
+      ],
+      "Guguak Pauh": [
+        77,
+        67
+      ]
+    }
+  },
+  "umurPiramida": {
+    "categories": [
+      "0-4",
+      "5-9",
+      "10-14",
+      "15-19",
+      "20-24",
+      "25-29",
+      "30-34",
+      "35-39",
+      "40-44",
+      "45-49",
+      "50-54",
+      "55-59",
+      "60-64",
+      "65-69",
+      "70-74",
+      "75+"
+    ],
+    "male": [
+      42,
+      62,
+      60,
+      56,
+      75,
+      53,
+      53,
+      48,
+      62,
+      48,
+      51,
+      37,
+      25,
+      32,
+      27,
+      23
+    ],
+    "female": [
+      41,
+      58,
+      52,
+      60,
+      53,
+      57,
+      44,
+      48,
+      55,
+      38,
+      38,
+      38,
+      32,
+      40,
+      32,
+      37
+    ],
+    "byDusun": {
+      "Batu Tajam": {
+        "male": [
+          10,
+          23,
+          22,
+          22,
+          27,
+          17,
+          20,
+          13,
+          22,
+          17,
+          23,
+          12,
+          9,
+          9,
+          8,
+          7
+        ],
+        "female": [
+          15,
+          15,
+          12,
+          20,
+          21,
+          23,
+          7,
+          20,
+          18,
+          17,
+          16,
+          13,
+          7,
+          13,
+          11,
+          14
+        ]
+      },
+      "Luak Mani": {
+        "male": [
+          9,
+          14,
+          11,
+          12,
+          13,
+          13,
+          13,
+          11,
+          14,
+          7,
+          8,
+          3,
+          7,
+          7,
+          5,
+          3
+        ],
+        "female": [
+          7,
+          9,
+          13,
+          7,
+          11,
+          13,
+          13,
+          11,
+          8,
+          4,
+          9,
+          8,
+          9,
+          8,
+          6,
+          7
+        ]
+      },
+      "Polak Datar": {
+        "male": [
+          10,
+          13,
+          17,
+          12,
+          25,
+          18,
+          16,
+          13,
+          15,
+          14,
+          14,
+          12,
+          5,
+          10,
+          5,
+          10
+        ],
+        "female": [
+          10,
+          21,
+          12,
+          18,
+          12,
+          14,
+          15,
+          12,
+          16,
+          14,
+          9,
+          12,
+          9,
+          9,
+          9,
+          12
+        ]
+      },
+      "Sionsek": {
+        "male": [
+          8,
+          3,
+          5,
+          4,
+          3,
+          5,
+          1,
+          5,
+          6,
+          3,
+          3,
+          3,
+          1,
+          3,
+          4,
+          0
+        ],
+        "female": [
+          4,
+          7,
+          9,
+          9,
+          3,
+          5,
+          4,
+          4,
+          7,
+          0,
+          0,
+          1,
+          3,
+          5,
+          3,
+          3
+        ]
+      },
+      "Guguak Pauh": {
+        "male": [
+          5,
+          9,
+          5,
+          6,
+          7,
+          0,
+          3,
+          6,
+          5,
+          7,
+          3,
+          7,
+          3,
+          3,
+          5,
+          3
+        ],
+        "female": [
+          5,
+          6,
+          6,
+          6,
+          6,
+          2,
+          5,
+          1,
+          6,
+          3,
+          4,
+          4,
+          4,
+          5,
+          3,
+          1
+        ]
+      }
+    },
+    "productive": {
+      "male": 508,
+      "female": 463,
+      "total": 971,
+      "share": 65.74
+    },
+    "description": "Piramida umur menampilkan komposisi laki-laki dan perempuan menurut kelompok umur lima tahunan."
   },
   "usia": {
-    "categories": ["Bayi dan Balita", "Anak-anak", "Remaja", "Dewasa", "Lansia"],
-    "total": [83, 120, 206, 821, 247],
+    "categories": [
+      "0-4 Tahun",
+      "5-14 Tahun",
+      "15-24 Tahun",
+      "25-64 Tahun",
+      "65+ Tahun"
+    ],
+    "total": [
+      83,
+      232,
+      244,
+      727,
+      191
+    ],
     "byDusun": {
-      "Batu Tajam": [25, 38, 70, 292, 78],
-      "Luak Mani": [16, 23, 38, 164, 52],
-      "Polak Datar": [20, 34, 55, 235, 69],
-      "Sionsek": [12, 10, 24, 56, 22],
-      "Guguak Pauh": [10, 15, 19, 73, 27]
+      "Batu Tajam": [
+        25,
+        72,
+        90,
+        254,
+        62
+      ],
+      "Luak Mani": [
+        16,
+        47,
+        43,
+        151,
+        36
+      ],
+      "Polak Datar": [
+        20,
+        63,
+        67,
+        208,
+        55
+      ],
+      "Sionsek": [
+        12,
+        24,
+        19,
+        51,
+        18
+      ],
+      "Guguak Pauh": [
+        10,
+        26,
+        25,
+        63,
+        20
+      ]
     }
   },
   "pendidikan": {
-    "categories": ["Tidak/Belum Sekolah", "Belum Tamat SD/Sederajat", "Tamat SD/Sederajat", "SLTP/Sederajat", "SLTA/Sederajat", "Diploma I/II", "Akademi/Diploma III/S. Muda", "Diploma IV/Strata I", "Strata II", "Belum tercatat"],
-    "total": [361, 170, 238, 233, 326, 21, 44, 77, 2, 5],
+    "categories": [
+      "Tidak/Belum Sekolah",
+      "Belum Tamat SD/Sederajat",
+      "Tamat SD/Sederajat",
+      "SLTP/Sederajat",
+      "SLTA/Sederajat",
+      "Diploma I/II",
+      "Akademi/Diploma III/S. Muda",
+      "Diploma IV/Strata I",
+      "Strata II"
+    ],
+    "total": [
+      362,
+      170,
+      241,
+      233,
+      326,
+      21,
+      44,
+      78,
+      2
+    ],
     "byDusun": {
-      "Batu Tajam": [104, 62, 84, 66, 132, 6, 21, 26, 1, 1],
-      "Luak Mani": [76, 30, 42, 34, 77, 6, 11, 17, 0, 0],
-      "Polak Datar": [96, 43, 60, 83, 81, 9, 11, 29, 1, 0],
-      "Sionsek": [35, 25, 27, 18, 14, 0, 0, 2, 0, 3],
-      "Guguak Pauh": [50, 10, 25, 32, 22, 0, 1, 3, 0, 1]
+      "Batu Tajam": [
+        104,
+        62,
+        84,
+        66,
+        132,
+        6,
+        21,
+        27,
+        1
+      ],
+      "Luak Mani": [
+        76,
+        30,
+        42,
+        34,
+        77,
+        6,
+        11,
+        17,
+        0
+      ],
+      "Polak Datar": [
+        96,
+        43,
+        60,
+        83,
+        81,
+        9,
+        11,
+        29,
+        1
+      ],
+      "Sionsek": [
+        35,
+        25,
+        30,
+        18,
+        14,
+        0,
+        0,
+        2,
+        0
+      ],
+      "Guguak Pauh": [
+        51,
+        10,
+        25,
+        32,
+        22,
+        0,
+        1,
+        3,
+        0
+      ]
     }
   },
   "pekerjaan": {
-    "categories": ["Pelajar/Mahasiswa", "Belum/Tidak Bekerja", "Mengurus Rumah Tangga", "Buruh Harian Lepas", "Petani/Buruh Tani", "Karyawan", "Pekerjaan Lainnya", "Wiraswasta", "PNS", "Pedagang"],
-    "total": [342, 283, 283, 136, 123, 94, 97, 62, 35, 22],
+    "categories": [
+      "Pelajar/Mahasiswa",
+      "Belum/Tidak Bekerja",
+      "Mengurus Rumah Tangga",
+      "Buruh Harian Lepas",
+      "Petani/Buruh Tani",
+      "Karyawan",
+      "Pekerjaan Lainnya",
+      "Wiraswasta",
+      "PNS",
+      "Pedagang"
+    ],
+    "total": [
+      342,
+      283,
+      283,
+      136,
+      123,
+      94,
+      97,
+      62,
+      35,
+      22
+    ],
     "byDusun": {
-      "Batu Tajam": [128, 84, 97, 46, 42, 31, 30, 19, 14, 12],
-      "Luak Mani": [60, 63, 53, 24, 16, 28, 25, 13, 6, 5],
-      "Polak Datar": [100, 73, 76, 38, 23, 30, 33, 22, 14, 4],
-      "Sionsek": [26, 28, 31, 11, 18, 1, 5, 3, 0, 1],
-      "Guguak Pauh": [28, 35, 26, 17, 24, 4, 4, 5, 1, 0]
+      "Batu Tajam": [
+        128,
+        84,
+        97,
+        46,
+        42,
+        31,
+        30,
+        19,
+        14,
+        12
+      ],
+      "Luak Mani": [
+        60,
+        63,
+        53,
+        24,
+        16,
+        28,
+        25,
+        13,
+        6,
+        5
+      ],
+      "Polak Datar": [
+        100,
+        73,
+        76,
+        38,
+        23,
+        30,
+        33,
+        22,
+        14,
+        4
+      ],
+      "Sionsek": [
+        26,
+        28,
+        31,
+        11,
+        18,
+        1,
+        5,
+        3,
+        0,
+        1
+      ],
+      "Guguak Pauh": [
+        28,
+        35,
+        26,
+        17,
+        24,
+        4,
+        4,
+        5,
+        1,
+        0
+      ]
+    }
+  },
+  "pekerjaanRingkas": {
+    "categories": [
+      "Tidak Bekerja",
+      "Mengurus Rumah Tangga",
+      "Pelajar/Mahasiswa",
+      "Bekerja"
+    ],
+    "total": [
+      283,
+      283,
+      342,
+      569
+    ],
+    "byDusun": {
+      "Batu Tajam": [
+        84,
+        97,
+        128,
+        194
+      ],
+      "Luak Mani": [
+        63,
+        53,
+        60,
+        117
+      ],
+      "Polak Datar": [
+        73,
+        76,
+        100,
+        164
+      ],
+      "Sionsek": [
+        28,
+        31,
+        26,
+        39
+      ],
+      "Guguak Pauh": [
+        35,
+        26,
+        28,
+        55
+      ]
     }
   },
   "pernikahan": {
-    "categories": ["Belum Kawin", "Kawin", "Cerai Mati", "Cerai Hidup"],
-    "total": [707, 628, 110, 32],
+    "categories": [
+      "Belum Kawin",
+      "Kawin",
+      "Cerai Mati",
+      "Cerai Hidup"
+    ],
+    "total": [
+      707,
+      628,
+      110,
+      32
+    ],
     "byDusun": {
-      "Batu Tajam": [241, 209, 41, 12],
-      "Luak Mani": [137, 128, 22, 6],
-      "Polak Datar": [197, 176, 31, 9],
-      "Sionsek": [60, 55, 7, 2],
-      "Guguak Pauh": [72, 60, 9, 3]
+      "Batu Tajam": [
+        241,
+        209,
+        41,
+        12
+      ],
+      "Luak Mani": [
+        137,
+        128,
+        22,
+        6
+      ],
+      "Polak Datar": [
+        197,
+        176,
+        31,
+        9
+      ],
+      "Sionsek": [
+        60,
+        55,
+        7,
+        2
+      ],
+      "Guguak Pauh": [
+        72,
+        60,
+        9,
+        3
+      ]
     }
   },
   "desil": {
-    "categories": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Tidak Ditentukan"],
-    "total": [50, 38, 49, 46, 59, 53, 34, 46, 51, 32, 32],
-    "byDusun": {
-      "Batu Tajam": [16, 11, 15, 11, 22, 24, 20, 17, 15, 6, 12],
-      "Luak Mani": [8, 8, 12, 10, 7, 5, 3, 12, 15, 12, 6],
-      "Polak Datar": [13, 11, 9, 13, 14, 18, 6, 15, 17, 12, 3],
-      "Sionsek": [5, 2, 6, 5, 7, 5, 2, 1, 2, 0, 4],
-      "Guguak Pauh": [8, 6, 5, 7, 6, 1, 3, 1, 2, 2, 7]
-    }
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "Tidak Ditentukan"
+    ],
+    "total": [
+      50,
+      38,
+      49,
+      46,
+      57,
+      53,
+      34,
+      46,
+      51,
+      32,
+      32
+    ],
+    "filterable": false
   },
   "bantuan": {
-    "categories": ["PKH & BPNT", "BPNT", "BLT DD", "Permakanan lansia", "Tidak Menerima"],
-    "total": [44, 16, 5, 3, 422],
+    "categories": [
+      "BLT DD",
+      "BPNT",
+      "Permakanan lansia",
+      "PKH & BPNT",
+      "Tidak Menerima"
+    ],
+    "total": [
+      5,
+      16,
+      3,
+      44,
+      422
+    ],
+    "filterable": false
+  },
+  "produkUnggulan": {
+    "summary": {
+      "totalActors": 43,
+      "totalProductionValue": 360000000,
+      "averageProductionValue": 8372093,
+      "individualShare": 97.67,
+      "subsectorCount": 2,
+      "productCount": 4
+    },
+    "subsectors": {
+      "categories": [
+        "Kuliner",
+        "Fashion"
+      ],
+      "total": [
+        18,
+        25
+      ]
+    },
+    "scale": {
+      "categories": [
+        "Perorangan",
+        "Umkm"
+      ],
+      "total": [
+        42,
+        1
+      ]
+    },
     "byDusun": {
-      "Batu Tajam": [9, 4, 1, 2, 153],
-      "Luak Mani": [12, 4, 1, 0, 81],
-      "Polak Datar": [9, 5, 1, 0, 116],
-      "Sionsek": [6, 0, 1, 0, 32],
-      "Guguak Pauh": [7, 3, 1, 1, 36]
+      "categories": [
+        "Batu Tajam",
+        "Luak Mani",
+        "Polak Datar",
+        "Sionsek",
+        "Guguak Pauh"
+      ],
+      "total": [
+        14,
+        12,
+        11,
+        2,
+        4
+      ],
+      "byProduct": {
+        "Batu Tajam": [
+          8,
+          5,
+          1,
+          0
+        ],
+        "Luak Mani": [
+          7,
+          3,
+          2,
+          0
+        ],
+        "Polak Datar": [
+          4,
+          3,
+          2,
+          2
+        ],
+        "Sionsek": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "Guguak Pauh": [
+          4,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "products": {
+      "categories": [
+        "TENUN SONGKET",
+        "KERUPUK UBI",
+        "Makanan & Minuman",
+        "KUE"
+      ],
+      "total": [
+        25,
+        11,
+        5,
+        2
+      ],
+      "value": [
+        195000000,
+        100000000,
+        43000000,
+        22000000
+      ],
+      "capacityBands": {
+        "TENUN SONGKET": [
+          {
+            "label": "± 20 s/d 30 helai",
+            "count": 11
+          },
+          {
+            "label": "± 20 s/d 35 helai",
+            "count": 3
+          },
+          {
+            "label": "± 10 s/d 20 helai",
+            "count": 2
+          },
+          {
+            "label": "± 10 s/d 15 helai",
+            "count": 2
+          },
+          {
+            "label": "± 30 s/d 35 helai",
+            "count": 2
+          },
+          {
+            "label": "± 5 s/d 10 helai",
+            "count": 2
+          },
+          {
+            "label": "± 1000 s/d 2000 helai",
+            "count": 1
+          },
+          {
+            "label": "± 7 s/d 10 helai",
+            "count": 1
+          },
+          {
+            "label": "± 20 s/d 25 helai",
+            "count": 1
+          }
+        ],
+        "KERUPUK UBI": [
+          {
+            "label": "± 2500 s/d 3000 kg",
+            "count": 4
+          },
+          {
+            "label": "± 1000 s/d 1500 kg",
+            "count": 3
+          },
+          {
+            "label": "± 3000 s/d 3500 kg",
+            "count": 2
+          },
+          {
+            "label": "± 2000 s/d 2500 kg",
+            "count": 1
+          },
+          {
+            "label": "± 1500 s/d 2000 kg",
+            "count": 1
+          }
+        ],
+        "Makanan & Minuman": [
+          {
+            "label": "± 200 s/d 300 porsi",
+            "count": 2
+          },
+          {
+            "label": "± 100 s/d 150 porsi",
+            "count": 2
+          },
+          {
+            "label": "± 500 s/d 1000 porsi",
+            "count": 1
+          }
+        ],
+        "KUE": [
+          {
+            "label": "± 200 s/d 300 porsi",
+            "count": 1
+          },
+          {
+            "label": "± 500 s/d 800 porsi",
+            "count": 1
+          }
+        ]
+      }
     }
+  },
+  "fasilitas": {
+    "categories": [
+      "Fasilitas Kesehatan",
+      "Fasilitas Olahraga",
+      "Fasilitas Pendidikan",
+      "Fasilitas Agama"
+    ],
+    "total": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "religious": {
+      "Masjid": 1,
+      "Surau": 4
+    },
+    "houses": 366
+  },
+  "aset": {
+    "categories": [
+      "Motor",
+      "Mobil",
+      "TV"
+    ],
+    "byDusun": {
+      "Luak Mani": [
+        102,
+        16,
+        27
+      ],
+      "Polak Datar": [
+        104,
+        9,
+        60
+      ],
+      "Guguak Pauh": [
+        41,
+        0,
+        19
+      ],
+      "Batu Tajam": [
+        142,
+        26,
+        73
+      ],
+      "Sionsek": [
+        27,
+        3,
+        14
+      ]
+    },
+    "total": [
+      416,
+      54,
+      193
+    ]
   }
 }

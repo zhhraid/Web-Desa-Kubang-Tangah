@@ -31,7 +31,7 @@ if ( isset( $_GET['key'] ) && isset( $_POST['key'] ) && $_GET['key'] !== $_POST[
 } elseif ( ! empty( $_GET['key'] ) ) {
 	$key = sanitize_text_field( $_GET['key'] );
 } elseif ( ! empty( $_POST['key'] ) ) {
-	$key = sanitize_text_field( $_POST['key'] );
+	$key = sanitize_text_field( $_POST['key'] 
 }
 
 if ( $key ) {

@@ -16,7 +16,7 @@ $menu_items = [
 	[ 'label' => 'Profil', 'path' => '/profil_desa/', 'current' => is_page( 'profil_desa' ) ],
 	[ 'label' => 'Pemerintahan', 'path' => '/pemerintahan_desa/', 'current' => is_page( 'pemerintahan_desa' ) ],
 	[ 'label' => 'Berita', 'path' => '/berita/', 'current' => is_page( 'berita' ) || is_singular( 'post' ) ],
-	[ 'label' => 'Data dan Infografis', 'path' => '/data-infografis/', 'current' => is_page( 'data-infografis' ) ],
+	[ 'label' => 'Statistik Desa', 'path' => '/data-infografis/', 'current' => is_page( 'data-infografis' ) ],
 	[ 'label' => 'Informasi', 'path' => '/data/', 'current' => is_page( 'data' ) ],
 	[ 'label' => 'Galeri', 'path' => '/galeri/', 'current' => is_page( 'galeri' ) ],
 	[ 'label' => 'Kontak', 'url' => $whatsapp_url, 'current' => false, 'cta' => true, 'target' => '_blank', 'rel' => 'noopener noreferrer', 'aria_label' => 'Kontak WhatsApp Pak Rice' ],

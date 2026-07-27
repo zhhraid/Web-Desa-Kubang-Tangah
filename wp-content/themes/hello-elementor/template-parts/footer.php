@@ -14,7 +14,7 @@ $footer_links  = [
 	[ 'label' => 'Profil', 'path' => '/profil_desa/' ],
 	[ 'label' => 'Pemerintahan', 'path' => '/pemerintahan_desa/' ],
 	[ 'label' => 'Berita', 'path' => '/berita/' ],
-	[ 'label' => 'Data dan Infografis', 'path' => '/data-infografis/' ],
+	[ 'label' => 'Statistik Desa', 'path' => '/data-infografis/' ],
 	[ 'label' => 'Informasi', 'path' => '/data/' ],
 	[ 'label' => 'Galeri', 'path' => '/galeri/' ],
 ];
